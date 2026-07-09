@@ -16,16 +16,10 @@ export function PlayerCard({ player, answered, isCorrect, imageLoaded, setImageL
   useEffect(() => {
     setImgError(false);
     setImageLoaded(false);
-    console.log('[PlayerCard] Loading image:', player.image);
-    console.log('[PlayerCard] Full URL:', window.location.origin + player.image);
-
-    fetch(player.image, { method: 'HEAD' })
-      .then(r => console.log('[PlayerCard] Fetch status:', r.status, 'Content-Type:', r.headers.get('content-type')))
-      .catch(e => console.error('[PlayerCard] Fetch error:', e));
-  }, [player.image, setImageLoaded]);
+  }, [player.name, setImageLoaded]);
 
   return (
-    <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden bg-red-500">
+    <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden">
       {!imageLoaded && !imgError && (
         <div className="absolute inset-0 z-10">
           <LoadingSkeleton />
@@ -37,13 +31,14 @@ export function PlayerCard({ player, answered, isCorrect, imageLoaded, setImageL
           key={player.name}
           src={player.image}
           alt="Guess this player"
-          style={{ width: 300, height: 300, border: '3px solid lime', objectFit: 'cover', display: 'block' }}
-          onLoad={() => {
-            console.log('[PlayerCard] Image loaded OK:', player.image);
-            setImageLoaded(true);
-          }}
-          onError={(e) => {
-            console.error('[PlayerCard] Image FAILED:', player.image, e);
+          className={`
+            w-full h-full object-cover
+            transition-all duration-500
+            ${answered && !isCorrect ? 'grayscale opacity-70 animate-shake' : ''}
+            ${answered && isCorrect ? 'brightness-110 saturate-110 animate-pulse-scale' : ''}
+          `}
+          onLoad={() => setImageLoaded(true)}
+          onError={() => {
             setImgError(true);
             setImageLoaded(true);
           }}

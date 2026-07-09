@@ -22,7 +22,4 @@ Thumbs.db
 # Debug
 npm-debug.log*
 
-# Player images (large binaries, add manually or via LFS)
-public/players/*.jpg
-public/players/*.png
-public/players/*.webp
+

@@ -21,6 +21,22 @@ import { benficaPlayers } from './benfica';
 import { portoPlayers } from './porto';
 import { westhamPlayers } from './westham';
 import { brightonPlayers } from './brighton';
+import { brazilPlayers } from './brazil';
+import { argentinaPlayers } from './argentina';
+import { francePlayers } from './france';
+import { germanyPlayers } from './germany';
+import { spainPlayers } from './spain';
+import { englandPlayers } from './england';
+import { netherlandsPlayers } from './netherlands';
+import { portugalPlayers } from './portugal';
+import { italyPlayers } from './italy';
+import { croatiaPlayers } from './croatia';
+import { japanPlayers } from './japan';
+import { southKoreaPlayers } from './south-korea';
+import { usaPlayers } from './usa';
+import { mexicoPlayers } from './mexico';
+import { moroccoPlayers } from './morocco';
+import { belgiumPlayers } from './belgium';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -228,5 +244,150 @@ export const teams: Team[] = [
     logo: `${BASE}logos/porto.png`,
     league: 'Primeira Liga',
     players: portoPlayers,
+  },
+  // National Teams - World Cup 2026
+  {
+    id: 'brazil',
+    name: 'Brazil',
+    shortName: 'BRA',
+    color: '#009C3B',
+    logo: `${BASE}logos/brazil.png`,
+    league: 'World Cup 2026',
+    players: brazilPlayers,
+  },
+  {
+    id: 'argentina',
+    name: 'Argentina',
+    shortName: 'ARG',
+    color: '#74ACDF',
+    logo: `${BASE}logos/argentina.png`,
+    league: 'World Cup 2026',
+    players: argentinaPlayers,
+  },
+  {
+    id: 'france',
+    name: 'France',
+    shortName: 'FRA',
+    color: '#002654',
+    logo: `${BASE}logos/france.png`,
+    league: 'World Cup 2026',
+    players: francePlayers,
+  },
+  {
+    id: 'germany',
+    name: 'Germany',
+    shortName: 'GER',
+    color: '#000000',
+    logo: `${BASE}logos/germany.png`,
+    league: 'World Cup 2026',
+    players: germanyPlayers,
+  },
+  {
+    id: 'spain',
+    name: 'Spain',
+    shortName: 'ESP',
+    color: '#AA151B',
+    logo: `${BASE}logos/spain.png`,
+    league: 'World Cup 2026',
+    players: spainPlayers,
+  },
+  {
+    id: 'england',
+    name: 'England',
+    shortName: 'ENG',
+    color: '#CF081F',
+    logo: `${BASE}logos/england.png`,
+    league: 'World Cup 2026',
+    players: englandPlayers,
+  },
+  {
+    id: 'netherlands',
+    name: 'Netherlands',
+    shortName: 'NED',
+    color: '#FF6600',
+    logo: `${BASE}logos/netherlands.png`,
+    league: 'World Cup 2026',
+    players: netherlandsPlayers,
+  },
+  {
+    id: 'portugal',
+    name: 'Portugal',
+    shortName: 'POR',
+    color: '#006600',
+    logo: `${BASE}logos/portugal.png`,
+    league: 'World Cup 2026',
+    players: portugalPlayers,
+  },
+  {
+    id: 'italy',
+    name: 'Italy',
+    shortName: 'ITA',
+    color: '#008C45',
+    logo: `${BASE}logos/italy.png`,
+    league: 'World Cup 2026',
+    players: italyPlayers,
+  },
+  {
+    id: 'croatia',
+    name: 'Croatia',
+    shortName: 'CRO',
+    color: '#171796',
+    logo: `${BASE}logos/croatia.png`,
+    league: 'World Cup 2026',
+    players: croatiaPlayers,
+  },
+  {
+    id: 'japan',
+    name: 'Japan',
+    shortName: 'JPN',
+    color: '#002654',
+    logo: `${BASE}logos/japan.png`,
+    league: 'World Cup 2026',
+    players: japanPlayers,
+  },
+  {
+    id: 'south-korea',
+    name: 'South Korea',
+    shortName: 'KOR',
+    color: '#003478',
+    logo: `${BASE}logos/south-korea.png`,
+    league: 'World Cup 2026',
+    players: southKoreaPlayers,
+  },
+  {
+    id: 'usa',
+    name: 'USA',
+    shortName: 'USA',
+    color: '#002868',
+    logo: `${BASE}logos/usa.png`,
+    league: 'World Cup 2026',
+    players: usaPlayers,
+  },
+  {
+    id: 'mexico',
+    name: 'Mexico',
+    shortName: 'MEX',
+    color: '#006847',
+    logo: `${BASE}logos/mexico.png`,
+    league: 'World Cup 2026',
+    players: mexicoPlayers,
+  },
+  {
+    id: 'morocco',
+    name: 'Morocco',
+    shortName: 'MAR',
+    color: '#006233',
+    logo: `${BASE}logos/morocco.png`,
+    league: 'World Cup 2026',
+    players: moroccoPlayers,
+  },
+  {
+    id: 'belgium',
+    name: 'Belgium',
+    shortName: 'BEL',
+    color: '#000000',
+    logo: `${BASE}logos/belgium.png`,
+    league: 'World Cup 2026',
+    players: belgiumPlayers,
   },
 ];

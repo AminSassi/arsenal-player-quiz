@@ -17,6 +17,7 @@ const LEAGUES = [
   { name: 'Bundesliga', logo: `${BASE}logos/bundesliga.png`, country: 'Germany' },
   { name: 'Ligue 1', logo: `${BASE}logos/ligue-1.png`, country: 'France' },
   { name: 'Primeira Liga', logo: `${BASE}logos/primeira-liga.png`, country: 'Portugal' },
+  { name: 'World Cup 2026', logo: `${BASE}logos/world-cup-2026.png`, country: 'International' },
 ];
 
 export function TeamSelector({ onSelect, selectedLeague, onSelectLeague, onBack }: Props) {

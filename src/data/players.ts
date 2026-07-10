@@ -111,25 +111,30 @@ export function checkAnswer(input: string, correctName: string): boolean {
   if (inputFirst === correctFirst && inputLast === correctLast) return true;
   if (inputFirst === correctLast && inputLast === correctFirst) return true;
 
-  // 5. Starts-with (e.g. "bukayo s" matches "bukayo saka")
+  // 5. Input contains surname or surname contains input (e.g. "vieira" matches "fabio vieira")
+  if (inputFull.length >= 3 && correctLast.length >= 3) {
+    if (correctLast.includes(inputFull) || inputFull.includes(correctLast)) return true;
+  }
+
+  // 6. Starts-with (e.g. "bukayo s" matches "bukayo saka")
   if (correctFull.startsWith(inputFull) && inputFull.length >= 3) return true;
 
-  // 6. Hyphenated name parts (e.g. "lewis" matches "lewis-skelly")
+  // 7. Hyphenated name parts (e.g. "lewis" matches "lewis-skelly")
   if (correctLast.includes('-')) {
     const parts = correctLast.split('-');
     if (parts.some(p => p === inputFull)) return true;
   }
 
-  // 7. Fuzzy match on full name (catches typos like "odegaard", "calafiori", "gyokeres")
+  // 8. Fuzzy match on full name (catches typos)
   const fullResults: MatchData<Player>[] = fullNameSearcher.search(inputFull, { returnMatchData: true });
-  if (fullResults.length > 0 && fullResults[0].score >= 0.88) {
+  if (fullResults.length > 0 && fullResults[0].score >= 0.82) {
     if (normalize(fullResults[0].item.name) === correctFull) return true;
   }
 
-  // 8. Fuzzy match on surname (catches surname typos)
+  // 9. Fuzzy match on surname (catches surname typos)
   if (inputFull.length >= 3) {
     const surnameResults: MatchData<Player>[] = surnameSearcher.search(inputFull, { returnMatchData: true });
-    if (surnameResults.length > 0 && surnameResults[0].score >= 0.88) {
+    if (surnameResults.length > 0 && surnameResults[0].score >= 0.82) {
       if (normalize(surnameResults[0].item.name) === correctFull) return true;
     }
   }

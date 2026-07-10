@@ -37,7 +37,7 @@ export const teams: Team[] = [
     name: 'Chelsea',
     shortName: 'CHE',
     color: '#034694',
-    logo: `${BASE}logos/chelsea.svg`,
+    logo: `${BASE}logos/chelsea.png`,
     players: chelseaPlayers,
   },
   {
@@ -45,7 +45,7 @@ export const teams: Team[] = [
     name: 'Tottenham',
     shortName: 'TOT',
     color: '#132257',
-    logo: `${BASE}logos/tottenham.svg`,
+    logo: `${BASE}logos/tottenham.png`,
     players: tottenhamPlayers,
   },
 ];

@@ -19,6 +19,8 @@ import { lyonPlayers } from './lyon';
 import { sportingPlayers } from './sporting';
 import { benficaPlayers } from './benfica';
 import { portoPlayers } from './porto';
+import { westhamPlayers } from './westham';
+import { brightonPlayers } from './brighton';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -182,5 +184,21 @@ export const teams: Team[] = [
     color: '#003B7A',
     logo: `${BASE}logos/porto.png`,
     players: portoPlayers,
+  },
+  {
+    id: 'westham',
+    name: 'West Ham United',
+    shortName: 'WHU',
+    color: '#7A263A',
+    logo: `${BASE}logos/westham.png`,
+    players: westhamPlayers,
+  },
+  {
+    id: 'brighton',
+    name: 'Brighton & Hove Albion',
+    shortName: 'BHA',
+    color: '#0057B8',
+    logo: `${BASE}logos/brighton.png`,
+    players: brightonPlayers,
   },
 ];

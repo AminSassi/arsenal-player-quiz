@@ -32,7 +32,7 @@ export function PlayerCard({ player, answered, isCorrect, imageLoaded, setImageL
           src={player.image}
           alt="Guess this player"
           className={`
-            w-full h-full object-cover
+            w-full h-full object-cover object-top
             transition-all duration-500
             ${answered && !isCorrect ? 'grayscale opacity-70 animate-shake' : ''}
             ${answered && isCorrect ? 'brightness-110 saturate-110 animate-pulse-scale' : ''}

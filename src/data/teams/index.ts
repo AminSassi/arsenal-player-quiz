@@ -8,10 +8,23 @@ import { barcelonaPlayers } from './barcelona';
 import { juventusPlayers } from './juventus';
 import { bayernPlayers } from './bayern';
 import { psgPlayers } from './psg';
+import { realmadridPlayers } from './realmadrid';
+import { acmilanPlayers } from './acmilan';
+import { bvbPlayers } from './bvb';
+import { atleticoPlayers } from './atletico';
+import { napoliPlayers } from './napoli';
 
 const BASE = import.meta.env.BASE_URL;
 
 export const teams: Team[] = [
+  {
+    id: 'realmadrid',
+    name: 'Real Madrid',
+    shortName: 'RMA',
+    color: '#FEBE10',
+    logo: `${BASE}logos/realmadrid.png`,
+    players: realmadridPlayers,
+  },
   {
     id: 'barcelona',
     name: 'Barcelona',
@@ -21,12 +34,52 @@ export const teams: Team[] = [
     players: barcelonaPlayers,
   },
   {
+    id: 'atletico',
+    name: 'Atletico Madrid',
+    shortName: 'ATM',
+    color: '#CB3524',
+    logo: `${BASE}logos/atletico.png`,
+    players: atleticoPlayers,
+  },
+  {
     id: 'bayern',
     name: 'Bayern Munich',
     shortName: 'BAY',
     color: '#DC052D',
     logo: `${BASE}logos/bayern.png`,
     players: bayernPlayers,
+  },
+  {
+    id: 'bvb',
+    name: 'Borussia Dortmund',
+    shortName: 'BVB',
+    color: '#FDE100',
+    logo: `${BASE}logos/bvb.png`,
+    players: bvbPlayers,
+  },
+  {
+    id: 'juventus',
+    name: 'Juventus',
+    shortName: 'JUV',
+    color: '#000000',
+    logo: `${BASE}logos/juventus.png`,
+    players: juventusPlayers,
+  },
+  {
+    id: 'acmilan',
+    name: 'AC Milan',
+    shortName: 'ACM',
+    color: '#FB090B',
+    logo: `${BASE}logos/acmilan.png`,
+    players: acmilanPlayers,
+  },
+  {
+    id: 'napoli',
+    name: 'Napoli',
+    shortName: 'NAP',
+    color: '#12A0D7',
+    logo: `${BASE}logos/napoli.png`,
+    players: napoliPlayers,
   },
   {
     id: 'psg',
@@ -75,13 +128,5 @@ export const teams: Team[] = [
     color: '#132257',
     logo: `${BASE}logos/tottenham.png`,
     players: tottenhamPlayers,
-  },
-  {
-    id: 'juventus',
-    name: 'Juventus',
-    shortName: 'JUV',
-    color: '#000000',
-    logo: `${BASE}logos/juventus.png`,
-    players: juventusPlayers,
   },
 ];

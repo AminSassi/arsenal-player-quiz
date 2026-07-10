@@ -130,7 +130,7 @@ export function QuizScreen({
               placeholder="Type player's name..."
               className="w-full px-5 py-4 rounded-2xl bg-gray-100 dark:bg-gray-800
                 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500
-                border-2 border-transparent focus:border-arsenal-red/30 focus:bg-white dark:focus:bg-gray-750
+                border-2 border-transparent focus:border-red-600/30
                 outline-none transition-all duration-200 text-lg"
               autoComplete="off"
               autoFocus

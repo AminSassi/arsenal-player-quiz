@@ -25,7 +25,11 @@ export function TeamSelector({ onSelect }: Props) {
                 bg-white dark:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500
                 active:scale-[0.97] transition-all duration-200 text-left"
             >
-              <div className="text-3xl mb-2">{team.logo}</div>
+              <img
+                src={team.logo}
+                alt={team.name}
+                className="w-12 h-12 mb-3 object-contain"
+              />
               <div className="font-semibold text-gray-900 dark:text-white text-sm">
                 {team.name}
               </div>

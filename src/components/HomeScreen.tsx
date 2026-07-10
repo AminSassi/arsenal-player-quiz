@@ -18,12 +18,11 @@ export function HomeScreen({ team, onStart, onBack, bestScore }: Props) {
           ← Teams
         </button>
 
-        <div
-          className="w-20 h-20 mx-auto mb-8 rounded-full flex items-center justify-center text-4xl"
-          style={{ backgroundColor: team.color + '15' }}
-        >
-          {team.logo}
-        </div>
+        <img
+          src={team.logo}
+          alt={team.name}
+          className="w-20 h-20 mx-auto mb-8 object-contain"
+        />
 
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 tracking-tight">
           Guess the<br />{team.name} Player

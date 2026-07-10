@@ -17,7 +17,7 @@ export const teams: Team[] = [
     name: 'Barcelona',
     shortName: 'BAR',
     color: '#A50044',
-    logo: `${BASE}logos/barcelona.svg`,
+    logo: `${BASE}logos/barcelona.png`,
     players: barcelonaPlayers,
   },
   {
@@ -25,7 +25,7 @@ export const teams: Team[] = [
     name: 'Bayern Munich',
     shortName: 'BAY',
     color: '#DC052D',
-    logo: `${BASE}logos/bayern.svg`,
+    logo: `${BASE}logos/bayern.png`,
     players: bayernPlayers,
   },
   {
@@ -33,7 +33,7 @@ export const teams: Team[] = [
     name: 'Paris Saint-Germain',
     shortName: 'PSG',
     color: '#004170',
-    logo: `${BASE}logos/psg.svg`,
+    logo: `${BASE}logos/psg.png`,
     players: psgPlayers,
   },
   {
@@ -41,7 +41,7 @@ export const teams: Team[] = [
     name: 'Arsenal',
     shortName: 'ARS',
     color: '#EF0107',
-    logo: `${BASE}logos/arsenal.svg`,
+    logo: `${BASE}logos/arsenal.png`,
     players: arsenalPlayers,
   },
   {
@@ -49,7 +49,7 @@ export const teams: Team[] = [
     name: 'Manchester City',
     shortName: 'MCI',
     color: '#6CABDD',
-    logo: `${BASE}logos/mancity.svg`,
+    logo: `${BASE}logos/mancity.png`,
     players: mancityPlayers,
   },
   {
@@ -57,7 +57,7 @@ export const teams: Team[] = [
     name: 'Liverpool',
     shortName: 'LIV',
     color: '#C8102E',
-    logo: `${BASE}logos/liverpool.svg`,
+    logo: `${BASE}logos/liverpool.png`,
     players: liverpoolPlayers,
   },
   {
@@ -65,7 +65,7 @@ export const teams: Team[] = [
     name: 'Chelsea',
     shortName: 'CHE',
     color: '#034694',
-    logo: `${BASE}logos/chelsea.svg`,
+    logo: `${BASE}logos/chelsea.png`,
     players: chelseaPlayers,
   },
   {
@@ -73,7 +73,7 @@ export const teams: Team[] = [
     name: 'Tottenham',
     shortName: 'TOT',
     color: '#132257',
-    logo: `${BASE}logos/tottenham.svg`,
+    logo: `${BASE}logos/tottenham.png`,
     players: tottenhamPlayers,
   },
   {
@@ -81,7 +81,7 @@ export const teams: Team[] = [
     name: 'Juventus',
     shortName: 'JUV',
     color: '#000000',
-    logo: `${BASE}logos/juventus.svg`,
+    logo: `${BASE}logos/juventus.png`,
     players: juventusPlayers,
   },
 ];

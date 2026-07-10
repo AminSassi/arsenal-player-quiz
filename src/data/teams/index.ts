@@ -13,6 +13,12 @@ import { acmilanPlayers } from './acmilan';
 import { bvbPlayers } from './bvb';
 import { atleticoPlayers } from './atletico';
 import { napoliPlayers } from './napoli';
+import { interPlayers } from './inter';
+import { romaPlayers } from './roma';
+import { lyonPlayers } from './lyon';
+import { sportingPlayers } from './sporting';
+import { benficaPlayers } from './benfica';
+import { portoPlayers } from './porto';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -128,5 +134,53 @@ export const teams: Team[] = [
     color: '#132257',
     logo: `${BASE}logos/tottenham.png`,
     players: tottenhamPlayers,
+  },
+  {
+    id: 'inter',
+    name: 'Inter Milan',
+    shortName: 'INT',
+    color: '#0068A8',
+    logo: `${BASE}logos/inter.png`,
+    players: interPlayers,
+  },
+  {
+    id: 'roma',
+    name: 'AS Roma',
+    shortName: 'ROM',
+    color: '#8E1F2F',
+    logo: `${BASE}logos/roma.png`,
+    players: romaPlayers,
+  },
+  {
+    id: 'lyon',
+    name: 'Olympique Lyonnais',
+    shortName: 'OL',
+    color: '#0F4C81',
+    logo: `${BASE}logos/lyon.png`,
+    players: lyonPlayers,
+  },
+  {
+    id: 'sporting',
+    name: 'Sporting CP',
+    shortName: 'SCP',
+    color: '#00843D',
+    logo: `${BASE}logos/sporting.png`,
+    players: sportingPlayers,
+  },
+  {
+    id: 'benfica',
+    name: 'SL Benfica',
+    shortName: 'SLB',
+    color: '#FF0000',
+    logo: `${BASE}logos/benfica.png`,
+    players: benficaPlayers,
+  },
+  {
+    id: 'porto',
+    name: 'FC Porto',
+    shortName: 'FCP',
+    color: '#003B7A',
+    logo: `${BASE}logos/porto.png`,
+    players: portoPlayers,
   },
 ];

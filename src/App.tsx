@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useDarkMode } from './hooks/useDarkMode';
 import { useGameState } from './hooks/useGameState';
 import { TeamSelector } from './components/TeamSelector';
@@ -8,6 +9,7 @@ import { DarkModeToggle } from './components/DarkModeToggle';
 
 function App() {
   const { isDark, toggle: toggleDark } = useDarkMode();
+  const [selectedLeague, setSelectedLeague] = useState<string | null>(null);
   const {
     game,
     currentPlayer,
@@ -25,6 +27,11 @@ function App() {
     setPlayerName,
   } = useGameState();
 
+  const handleGoToTeams = () => {
+    setSelectedLeague(null);
+    goToTeams();
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="fixed top-4 right-4 z-50">
@@ -32,14 +39,19 @@ function App() {
       </div>
 
       {game.screen === 'teams' && (
-        <TeamSelector onSelect={selectTeam} />
+        <TeamSelector
+          onSelect={selectTeam}
+          selectedLeague={selectedLeague}
+          onSelectLeague={setSelectedLeague}
+          onBack={handleGoToTeams}
+        />
       )}
 
       {game.screen === 'home' && game.selectedTeam && (
         <HomeScreen
           team={game.selectedTeam}
           onStart={() => selectTeam(game.selectedTeam!)}
-          onBack={goToTeams}
+          onBack={handleGoToTeams}
           bestScore={bestScore}
         />
       )}
@@ -62,7 +74,7 @@ function App() {
           onSubmit={submitAnswer}
           onSkip={skipPlayer}
           onNext={nextPlayer}
-          onBack={goToTeams}
+          onBack={handleGoToTeams}
           onPlayerNameChange={setPlayerName}
         />
       )}
@@ -74,7 +86,7 @@ function App() {
           total={totalPlayers}
           bestScore={bestScore}
           onPlayAgain={() => selectTeam(game.selectedTeam!)}
-          onHome={goToTeams}
+          onHome={handleGoToTeams}
         />
       )}
     </div>

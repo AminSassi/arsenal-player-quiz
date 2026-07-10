@@ -9,6 +9,7 @@ export interface Team {
   shortName: string;
   color: string;
   logo: string;
+  league: string;
   players: Player[];
 }
 

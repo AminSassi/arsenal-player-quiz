@@ -1,9 +1,10 @@
 import { type FormEvent, type KeyboardEvent } from 'react';
-import type { Player } from '../types';
+import type { Player, Team } from '../types';
 import { PlayerCard } from './PlayerCard';
 import { Confetti } from './Confetti';
 
 interface Props {
+  team: Team;
   currentPlayer: Player;
   currentIndex: number;
   totalPlayers: number;
@@ -19,17 +20,18 @@ interface Props {
   onSubmit: (input: string) => void;
   onSkip: () => void;
   onNext: () => void;
+  onBack: () => void;
   onPlayerNameChange: (name: string) => void;
 }
 
 export function QuizScreen({
+  team,
   currentPlayer,
   currentIndex,
   totalPlayers,
   score,
   answered,
   isCorrect,
-  showNext,
   isLastQuestion,
   playerName,
   imageLoaded,
@@ -38,6 +40,7 @@ export function QuizScreen({
   onSubmit,
   onSkip,
   onNext,
+  onBack,
   onPlayerNameChange,
 }: Props) {
 
@@ -48,7 +51,7 @@ export function QuizScreen({
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === 'Enter' && answered && showNext) {
+    if (e.key === 'Enter' && answered) {
       onNext();
     }
   };
@@ -61,13 +64,17 @@ export function QuizScreen({
       <div className="w-full max-w-md flex flex-col items-center gap-8">
         {/* Header */}
         <div className="w-full flex items-center justify-between">
+          <button
+            onClick={onBack}
+            className="text-xs text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+          >
+            ← {team.name}
+          </button>
           <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
             {currentIndex + 1} / {totalPlayers}
           </div>
           <div className="flex items-center gap-1.5">
-            <svg viewBox="0 0 24 24" className="w-4 h-4 fill-arsenal-red">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-            </svg>
+            <span className="text-lg">❤️</span>
             <span className="text-sm font-semibold text-gray-900 dark:text-white">
               {score}
             </span>
@@ -77,8 +84,11 @@ export function QuizScreen({
         {/* Progress bar */}
         <div className="w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
           <div
-            className="h-full bg-arsenal-red rounded-full transition-all duration-500 ease-out"
-            style={{ width: `${((currentIndex + 1) / totalPlayers) * 100}%` }}
+            className="h-full rounded-full transition-all duration-500 ease-out"
+            style={{
+              width: `${((currentIndex + 1) / totalPlayers) * 100}%`,
+              backgroundColor: team.color,
+            }}
           />
         </div>
 
@@ -139,9 +149,10 @@ export function QuizScreen({
               <button
                 type="submit"
                 disabled={!playerName.trim()}
-                className="flex-1 py-3.5 rounded-2xl bg-arsenal-red text-white font-semibold
-                  hover:bg-red-700 active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed
+                className="flex-1 py-3.5 rounded-2xl text-white font-semibold
+                  active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed
                   transition-all duration-200"
+                style={{ backgroundColor: team.color }}
               >
                 Submit
               </button>
@@ -160,9 +171,10 @@ export function QuizScreen({
         ) : (
           <button
             onClick={onNext}
-            className="w-full py-4 rounded-2xl bg-arsenal-red text-white font-semibold text-lg
-              hover:bg-red-700 active:scale-[0.98]
-              transition-all duration-200 shadow-lg shadow-red-500/25 animate-fade-in"
+            className="w-full py-4 rounded-2xl text-white font-semibold text-lg
+              active:scale-[0.98]
+              transition-all duration-200 shadow-lg animate-fade-in"
+            style={{ backgroundColor: team.color, boxShadow: `0 8px 25px ${team.color}40` }}
           >
             {isLastQuestion ? 'See Results' : 'Next Player'}
           </button>

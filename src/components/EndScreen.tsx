@@ -1,7 +1,9 @@
-import { getGrade } from '../data/players';
+import type { Team } from '../types';
+import { getGrade } from '../data/matching';
 import { Confetti } from './Confetti';
 
 interface Props {
+  team: Team;
   score: number;
   total: number;
   bestScore: number;
@@ -9,17 +11,17 @@ interface Props {
   onHome: () => void;
 }
 
-export function EndScreen({ score, total, bestScore, onPlayAgain, onHome }: Props) {
+export function EndScreen({ team, score, total, bestScore, onPlayAgain, onHome }: Props) {
   const percentage = Math.round((score / total) * 100);
   const grade = getGrade(score, total);
   const isNewBest = score >= bestScore && score > 0;
 
   const getMessage = () => {
-    if (percentage >= 90) return 'Outstanding! You really know your Arsenal!';
-    if (percentage >= 75) return 'Great job! You know the squad well.';
+    if (percentage >= 90) return `Outstanding! You really know your ${team.name}!`;
+    if (percentage >= 75) return `Great job! You know the ${team.name} squad well.`;
     if (percentage >= 50) return 'Not bad! Room for improvement.';
     if (percentage >= 25) return 'Keep learning the squad!';
-    return 'Time to study the Arsenal roster!';
+    return `Time to study the ${team.name} roster!`;
   };
 
   return (
@@ -27,11 +29,12 @@ export function EndScreen({ score, total, bestScore, onPlayAgain, onHome }: Prop
       <Confetti />
 
       <div className="text-center max-w-md w-full">
-        {/* Grade */}
         <div className="mb-8">
-          <div className="w-28 h-28 mx-auto rounded-full bg-arsenal-red/10 dark:bg-arsenal-red/20
-            flex items-center justify-center mb-6">
-            <span className="text-5xl font-bold text-arsenal-red">{grade}</span>
+          <div
+            className="w-28 h-28 mx-auto rounded-full flex items-center justify-center mb-6"
+            style={{ backgroundColor: team.color + '15' }}
+          >
+            <span className="text-5xl font-bold" style={{ color: team.color }}>{grade}</span>
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
@@ -40,7 +43,6 @@ export function EndScreen({ score, total, bestScore, onPlayAgain, onHome }: Prop
           <p className="text-gray-500 dark:text-gray-400">{getMessage()}</p>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-3 gap-4 mb-8">
           <div className="p-4 rounded-2xl bg-gray-100 dark:bg-gray-800">
             <div className="text-2xl font-bold text-gray-900 dark:text-white">{score}</div>
@@ -59,17 +61,17 @@ export function EndScreen({ score, total, bestScore, onPlayAgain, onHome }: Prop
         {isNewBest && (
           <div className="mb-6 py-2 px-4 rounded-full bg-yellow-100 dark:bg-yellow-900/30
             text-yellow-700 dark:text-yellow-400 text-sm font-medium inline-block">
-            🏆 New best score!
+            New best score!
           </div>
         )}
 
-        {/* Buttons */}
         <div className="flex flex-col gap-3">
           <button
             onClick={onPlayAgain}
-            className="w-full py-4 rounded-2xl bg-arsenal-red text-white font-semibold text-lg
-              hover:bg-red-700 active:scale-[0.98]
-              transition-all duration-200 shadow-lg shadow-red-500/25"
+            className="w-full py-4 rounded-2xl text-white font-semibold text-lg
+              active:scale-[0.98]
+              transition-all duration-200 shadow-lg"
+            style={{ backgroundColor: team.color, boxShadow: `0 8px 25px ${team.color}40` }}
           >
             Play Again
           </button>
@@ -80,7 +82,7 @@ export function EndScreen({ score, total, bestScore, onPlayAgain, onHome }: Prop
               hover:bg-gray-300 dark:hover:bg-gray-600 active:scale-[0.98]
               transition-all duration-200"
           >
-            Back to Home
+            Choose Another Team
           </button>
         </div>
       </div>

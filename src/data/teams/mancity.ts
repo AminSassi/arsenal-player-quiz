@@ -1,0 +1,35 @@
+import type { Player } from '../../types';
+
+const BASE = import.meta.env.BASE_URL;
+
+export const mancityPlayers: Player[] = [
+  { name: 'Marcus Bettinelli', image: `${BASE}players/mancity/bettinelli.png` },
+  { name: 'Gianluigi Donnarumma', image: `${BASE}players/mancity/donnarumma.png` },
+  { name: 'James Trafford', image: `${BASE}players/mancity/trafford.png` },
+  { name: 'Rayan Ait-Nouri', image: `${BASE}players/mancity/ait-nouri.png` },
+  { name: 'Manuel Akanji', image: `${BASE}players/mancity/akanji.png` },
+  { name: 'Max Alleyne', image: `${BASE}players/mancity/alleyne.png` },
+  { name: 'Ruben Dias', image: `${BASE}players/mancity/dias.png` },
+  { name: 'Marc Guéhi', image: `${BASE}players/mancity/guehi.png` },
+  { name: 'Josko Gvardiol', image: `${BASE}players/mancity/gvardiol.png` },
+  { name: 'Abdukodir Khusanov', image: `${BASE}players/mancity/khusanov.png` },
+  { name: 'Rico Lewis', image: `${BASE}players/mancity/lewis.png` },
+  { name: 'Vitor Reis', image: `${BASE}players/mancity/reis.png` },
+  { name: 'Rayan Cherki', image: `${BASE}players/mancity/cherki.png` },
+  { name: 'Jeremy Doku', image: `${BASE}players/mancity/doku.png` },
+  { name: 'Claudio Echeverri', image: `${BASE}players/mancity/echeverri.png` },
+  { name: 'Phil Foden', image: `${BASE}players/mancity/foden.png` },
+  { name: 'Jack Grealish', image: `${BASE}players/mancity/grealish.png` },
+  { name: 'Mateo Kovacic', image: `${BASE}players/mancity/kovacic.png` },
+  { name: 'Nico González', image: `${BASE}players/mancity/nico.png` },
+  { name: 'Matheus Nunes', image: `${BASE}players/mancity/nunes.png` },
+  { name: 'Sverre Nypan', image: `${BASE}players/mancity/nypan.png` },
+  { name: 'Nico O\'Reilly', image: `${BASE}players/mancity/oreilly.png` },
+  { name: 'Kalvin Phillips', image: `${BASE}players/mancity/phillips.png` },
+  { name: 'Tijjani Reijnders', image: `${BASE}players/mancity/reijnders.png` },
+  { name: 'Rodrigo', image: `${BASE}players/mancity/rodri.png` },
+  { name: 'Savinho', image: `${BASE}players/mancity/savinho.png` },
+  { name: 'Antoine Semenyo', image: `${BASE}players/mancity/semenyo.png` },
+  { name: 'Erling Haaland', image: `${BASE}players/mancity/haaland.png` },
+  { name: 'Omar Marmoush', image: `${BASE}players/mancity/marmoush.png` },
+];

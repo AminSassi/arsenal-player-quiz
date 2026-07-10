@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
-import type { Player, GameState } from '../types';
-import { players as allPlayers, checkAnswer, shuffleArray } from '../data/players';
+import type { Player, Team, GameState } from '../types';
+import { createChecker, shuffleArray } from '../data/matching';
 
 const BEST_SCORE_KEY = 'arsenal-quiz-best-score';
 
@@ -23,7 +23,8 @@ function saveBestScore(score: number) {
 
 export function useGameState() {
   const [game, setGame] = useState<GameState>({
-    screen: 'home',
+    screen: 'teams',
+    selectedTeam: null,
     players: [],
     currentIndex: 0,
     score: 0,
@@ -48,11 +49,12 @@ export function useGameState() {
     });
   }, []);
 
-  const startGame = useCallback(() => {
-    const shuffled = shuffleArray(allPlayers);
+  const selectTeam = useCallback((team: Team) => {
+    const shuffled = shuffleArray(team.players);
     preloadImages(shuffled);
     setGame({
       screen: 'quiz',
+      selectedTeam: team,
       players: shuffled,
       currentIndex: 0,
       score: 0,
@@ -67,7 +69,8 @@ export function useGameState() {
   const submitAnswer = useCallback((input: string) => {
     if (!currentPlayer || game.answered) return;
 
-    const correct = checkAnswer(input, currentPlayer.name);
+    const checker = createChecker(game.players);
+    const correct = checker(input, currentPlayer.name);
     const newScore = correct ? game.score + 1 : game.score;
 
     setGame(prev => ({
@@ -82,7 +85,7 @@ export function useGameState() {
       saveBestScore(newScore);
       setBestScore(getBestScore());
     }
-  }, [currentPlayer, game.answered, game.score]);
+  }, [currentPlayer, game.answered, game.score, game.players]);
 
   const skipPlayer = useCallback(() => {
     if (!currentPlayer || game.answered) return;
@@ -115,9 +118,10 @@ export function useGameState() {
     }
   }, [isLastQuestion, game.score]);
 
-  const goHome = useCallback(() => {
+  const goToTeams = useCallback(() => {
     setGame({
-      screen: 'home',
+      screen: 'teams',
+      selectedTeam: null,
       players: [],
       currentIndex: 0,
       score: 0,
@@ -144,11 +148,11 @@ export function useGameState() {
     imageLoaded,
     setImageLoaded,
     inputRef,
-    startGame,
+    selectTeam,
     submitAnswer,
     skipPlayer,
     nextPlayer,
-    goHome,
+    goToTeams,
     setPlayerName: (name: string) => setGame(prev => ({ ...prev, playerName: name })),
   };
 }

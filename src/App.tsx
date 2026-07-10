@@ -1,5 +1,6 @@
 import { useDarkMode } from './hooks/useDarkMode';
 import { useGameState } from './hooks/useGameState';
+import { TeamSelector } from './components/TeamSelector';
 import { HomeScreen } from './components/HomeScreen';
 import { QuizScreen } from './components/QuizScreen';
 import { EndScreen } from './components/EndScreen';
@@ -16,27 +17,36 @@ function App() {
     imageLoaded,
     setImageLoaded,
     inputRef,
-    startGame,
+    selectTeam,
     submitAnswer,
     skipPlayer,
     nextPlayer,
-    goHome,
+    goToTeams,
     setPlayerName,
   } = useGameState();
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      {/* Dark mode toggle - fixed top right */}
       <div className="fixed top-4 right-4 z-50">
         <DarkModeToggle isDark={isDark} toggle={toggleDark} />
       </div>
 
-      {game.screen === 'home' && (
-        <HomeScreen onStart={startGame} bestScore={bestScore} />
+      {game.screen === 'teams' && (
+        <TeamSelector onSelect={selectTeam} />
+      )}
+
+      {game.screen === 'home' && game.selectedTeam && (
+        <HomeScreen
+          team={game.selectedTeam}
+          onStart={() => selectTeam(game.selectedTeam!)}
+          onBack={goToTeams}
+          bestScore={bestScore}
+        />
       )}
 
       {game.screen === 'quiz' && currentPlayer && (
         <QuizScreen
+          team={game.selectedTeam!}
           currentPlayer={currentPlayer}
           currentIndex={game.currentIndex}
           totalPlayers={totalPlayers}
@@ -52,17 +62,19 @@ function App() {
           onSubmit={submitAnswer}
           onSkip={skipPlayer}
           onNext={nextPlayer}
+          onBack={goToTeams}
           onPlayerNameChange={setPlayerName}
         />
       )}
 
       {game.screen === 'end' && (
         <EndScreen
+          team={game.selectedTeam!}
           score={game.score}
           total={totalPlayers}
           bestScore={bestScore}
-          onPlayAgain={startGame}
-          onHome={goHome}
+          onPlayAgain={() => selectTeam(game.selectedTeam!)}
+          onHome={goToTeams}
         />
       )}
     </div>

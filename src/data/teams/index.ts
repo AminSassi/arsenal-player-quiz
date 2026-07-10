@@ -13,14 +13,6 @@ const BASE = import.meta.env.BASE_URL;
 
 export const teams: Team[] = [
   {
-    id: 'realmadrid',
-    name: 'Real Madrid',
-    shortName: 'RMA',
-    color: '#FEBE10',
-    logo: `${BASE}logos/realmadrid.svg`,
-    players: [],
-  },
-  {
     id: 'barcelona',
     name: 'Barcelona',
     shortName: 'BAR',

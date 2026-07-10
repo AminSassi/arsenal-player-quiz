@@ -4,10 +4,46 @@ import { mancityPlayers } from './mancity';
 import { liverpoolPlayers } from './liverpool';
 import { chelseaPlayers } from './chelsea';
 import { tottenhamPlayers } from './tottenham';
+import { barcelonaPlayers } from './barcelona';
+import { juventusPlayers } from './juventus';
+import { bayernPlayers } from './bayern';
+import { psgPlayers } from './psg';
 
 const BASE = import.meta.env.BASE_URL;
 
 export const teams: Team[] = [
+  {
+    id: 'realmadrid',
+    name: 'Real Madrid',
+    shortName: 'RMA',
+    color: '#FEBE10',
+    logo: `${BASE}logos/realmadrid.svg`,
+    players: [],
+  },
+  {
+    id: 'barcelona',
+    name: 'Barcelona',
+    shortName: 'BAR',
+    color: '#A50044',
+    logo: `${BASE}logos/barcelona.svg`,
+    players: barcelonaPlayers,
+  },
+  {
+    id: 'bayern',
+    name: 'Bayern Munich',
+    shortName: 'BAY',
+    color: '#DC052D',
+    logo: `${BASE}logos/bayern.svg`,
+    players: bayernPlayers,
+  },
+  {
+    id: 'psg',
+    name: 'Paris Saint-Germain',
+    shortName: 'PSG',
+    color: '#004170',
+    logo: `${BASE}logos/psg.svg`,
+    players: psgPlayers,
+  },
   {
     id: 'arsenal',
     name: 'Arsenal',
@@ -47,5 +83,13 @@ export const teams: Team[] = [
     color: '#132257',
     logo: `${BASE}logos/tottenham.svg`,
     players: tottenhamPlayers,
+  },
+  {
+    id: 'juventus',
+    name: 'Juventus',
+    shortName: 'JUV',
+    color: '#000000',
+    logo: `${BASE}logos/juventus.svg`,
+    players: juventusPlayers,
   },
 ];

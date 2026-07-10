@@ -1,0 +1,2127 @@
+
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en" data-culture="en-GB" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/16x16">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/48x48">
+    <link rel="icon" type="image/png" sizes="64x64" href="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/64x64">
+    <link rel="icon" type="image/png" sizes="128x128" href="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/128x128">
+        <link rel="preload" href="/assets/fonts/JuventusFans/JuventusFans--bold.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/assets/fonts/JuventusFans/JuventusFans--boldstretched.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/assets/fonts/JuventusFans/JuventusFans--light.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/assets/fonts/JuventusFans/JuventusFans--medium.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/assets/fonts/JuventusFans/JuventusFans--regular.woff2" as="font" type="font/woff2" crossorigin />
+
+
+    <meta name="users:usersapibaseurl" content="https://www.juventus.com" />
+    <meta name="users:userinfourl" content="/users/api/Account/userinfo" />
+    <meta name="users:refreshtokenurl" content="/users/api/OAuth/token" />
+    <meta name="users:threedsecurev2enabled" content="true" />
+    <meta name="users:purchaseauthenticateurl" content="/users/api/Purchase/authenticate" />
+    <meta name="users:purchaseinitiateurl" content="/users/api/Purchase/initiate" />
+    <meta name="users:purchasecatalogurl" content="/users/api/Catalog" />
+    <meta name="users:purchasecompletev2" content="/users/api/purchase/complete/threedsv2" />
+    <meta name="users:addresscreateurl" content="/users/api/Purchase/address/create" />
+    <meta name="users:completethreedsurl" content="/users/api/Purchase/complete/creditcard" />
+    <meta name="users:paymentformdomain" content="https://juventus.esuite-skins.com" />
+    <meta name="users:thankyoupage" content="/en/video/thank-you" />
+    <meta name="users:errorpage" content="/en/video/error" />
+    <meta name="users:mppbaseurl" content="https://live.mppglobal.com" />
+    <meta name="users:mppnotificationdomain" content="https://payments.mppglobal.com" />
+    <meta name="users:threedsformurl" content="https://skinsuat.mppglobal.com/juventus/3dsform.html" />
+    <meta name="users:vouchervalidateurl" content="/users/api/voucher" />
+    <meta name="users:loginredirecturi" content="https://www.juventus.com/users/api/Account/entrypoint" />
+    <meta name="users:forcelogincheck" content="true" />
+    <meta name="account:baseurl" content="https://account.juventus.com" />
+    <meta name="account:ssologinurl" content="/oauth/sso_authorization_code?client_id=dduj74jyt8mfvwbqf2st6w56yusc3g7z&amp;redirect_uri=https://www.juventus.com/users/api/Account/entrypoint" />
+    <meta name="entitlement:baseurl" content="https://www.juventus.com/entitlement/" />
+    <meta name="entitlement:softcheckurl" content="/api/softcheck/{videoid}/{videoslug}/{culture}" />
+    <meta name="entitlement:getRightsurl" content="/api/UserRights/get" />
+    <meta name="notifyme:upserteventurl" content="https://www.juventus.com/notifyme/api/frm/upsertEvent" />
+    <meta name="notifyme:getusersubscriptionurl" content="https://www.juventus.com/notifyme/api/datastorage/getUserSubscription" />
+
+            <meta name="liveBlogConfig" content="{&quot;assets&quot;:{&quot;presentedByLogo&quot;:&quot;https://www.juventus.com/images/image/upload/v1680592316/dev/assets/sponsors/EAS_PRIMARY_LOGO_BLK_SVG.svg&quot;,&quot;fallBackImage&quot;:&quot;https://www.juventus.com/images/image/upload/v1653568089/juventuscom-dev/assets/stadium.jpg&quot;,&quot;mvpSponsorLogoTop&quot;:&quot;-30px&quot;,&quot;mvpSponsorLogoTopMobile&quot;:&quot;-16px&quot;},&quot;vocabularyApiUrl&quot;:&quot;https://www.juventus.com/en/api/v1/vocabularies/liveblogging&quot;,&quot;imagesBaseUrl&quot;:&quot;https://www.juventus.com/images&quot;}" />
+
+        <meta name="siteconfig:optaapi" content="https://api.performfeeds.com/soccerdata/match/1beaeep63zsv71a04kk2qk29pw" />
+        <meta name="siteconfig:matchentitiesapi" content="api/v1/matcheslist/" />
+        <meta name="siteconfig:matchentityapi" content="api/v1/match/{matchid}" />
+        <meta name="siteconfig:teamslogoentitesapi" content="api/v1/logos/clubs/" />
+        <meta name="siteconfig:complogoentitiesapi" content="api/v1/logos/competitions/" />
+        <meta name="siteconfig:optaapicontestant" content="bqbbqm98ud8obe45ds9ohgyrd" />
+        <meta name="siteconfig:logoentitiestype" content="first-team-men" />
+        <meta name="siteconfig:clubslogoentitiesapi" content="api/v1/logos/clubs/" />
+        <meta name="siteconfig:entitiestype" content="team-first-team-men" />
+        <meta name="siteconfig:optaapilineups" content="https://api.performfeeds.com/soccerdata/match/1vmmaetzoxkgg1qf6pkpfmku0k/{optamatchid}" />
+        <meta name="siteconfig:headshotsentitiesapi" content="api/v1/headshots/team/" />
+        <meta name="siteconfig:sitelang" content="en" />
+        <meta name="siteconfig:akamaibaseurl" content="https://www.juventus.com/en/" />
+        <meta name="siteconfig:headshotsentitiestype" content="first-team-men" />
+        <meta name="siteconfig:standingslink" content="/en/teams/first-team-men/standings/" />
+        <meta name="siteconfig:optaapimatchpreview" content="https://api.performfeeds.com/soccerdata/matchpreview/1beaeep63zsv71a04kk2qk29pw/{optamatchid}?_rt=c&amp;_fmt=json" />
+        <meta name="siteconfig:slugsponsorsentitiesapi" content="api/v1/sponsors/slugs" />
+        <meta name="siteconfig:forgelibpathsponsorbyslug" content="_libraries/sponsors/" />
+        <meta name="siteconfig:matchentityliveapi" content="api/v1/matchlive/{optamatchid}" />
+
+    <title>Oops! | Juventus.com</title>
+<meta content="Juventus.com" name="author"></meta>
+    <link href="https://www.juventus.com/en/errors/404" rel="canonical"></link>
+    <meta content="summary_large_image" name="twitter:card"></meta><meta content="https://www.juventus.com/images/image/private/t_editorial_landscape_12_desktop/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg" name="twitter:image"></meta><meta content="Oops! | Juventus.com" name="twitter:title"></meta><meta content="@juventusfce" name="twitter:creator"></meta><meta content="@juventusfce" name="twitter:site"></meta><meta content="app-id=123456789" name="apple-itunes-app"></meta>
+    <meta content="website" property="og:type"></meta><meta content="171522852874952" property="fb:app_id"></meta><meta content="https://www.juventus.com/images/image/private/t_editorial_landscape_12_desktop/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg" property="twitter:image"></meta><meta content="Juventus.com" property="og:site_name"></meta><meta content="https://www.juventus.com/images/image/private/t_editorial_landscape_12_desktop/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg" property="og:image"></meta><meta content="https://www.juventus.com/en/errors/404" property="og:url"></meta><meta content="Oops! | Juventus.com" property="og:title"></meta>
+
+<link href="/en/assets/css/base.css?_t=15417811e5b390d9f6157f83c0928d57" rel="preload" as="style" crossorigin type="text/css" /><link href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="preload" as="style" crossorigin type="text/css" /><link href="/en/assets/css/preset/static-page.css?_t=4c99ffc883c78fdf48e31733252ca9f2" rel="preload" as="style" crossorigin type="text/css" /><link href="/en/assets/css/base.css?_t=15417811e5b390d9f6157f83c0928d57" rel="stylesheet" type="text/css" /><link href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet" type="text/css" /><link href="/en/assets/css/preset/static-page.css?_t=4c99ffc883c78fdf48e31733252ca9f2" rel="stylesheet" type="text/css" />    <script type="application/ld&#x2B;json">{"@type":"Organization","name":"Juventus","url":"https://www.juventus.com/en","logo":{"@type":"ImageObject","url":"https://www.juventus.com/images/image/upload/f_auto/dev/assets/logo/juventus_logo"},"@context":"http://schema.org"}</script>
+    
+
+    <!-- Google Analytics -->
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PLRLJSS');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+        // Picture element HTML5 shiv - picturefill
+        document.createElement("picture");
+    </script>
+
+</head>
+<body class="errors 404  ">
+        <!-- OneTrust Cookies Consent Notice start -->
+        <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="c57c0a12-80b7-44c3-bf58-26a8dcb0cd62"></script>
+        <script type="text/javascript">
+            function OptanonWrapper() {
+                window.Optanon = Optanon;
+                if (window.cookieManager) {
+                    window.cookieManager.Init();
+                }
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
+            }
+        </script>
+        <!-- OneTrust Cookies Consent Notice end -->
+
+
+    <div class="d3-l-wrap "
+         >
+
+
+
+
+
+
+    <script src="/en/assets/js/vendor/jqueryautocomplete/1.4.10/jquery.autocomplete.min.js" defer></script>
+
+<header class="oc-c-header " role="banner" data-langredirect="False">
+  <div class="d3-o-nav__social-container">
+
+
+
+<ul class="jcom-o-nav__socials">
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.facebook.com/Juventus/" target=_blank title="Facebook" text="Facebook" alt="Facebook" aria-label="Facebook" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--facebook_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#facebook_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://instagram.com/juventus" target=_blank title="Instagram" text="Instagram" alt="Instagram" aria-label="Instagram" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--instagram_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#instagram_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.threads.net/@juventus" target=_blank title="Threads" text="Threads" alt="Threads" aria-label="Threads" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--threads_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#threads_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.youtube.com/juventus" target=_blank title="Youtube" text="Youtube" alt="Youtube" aria-label="Youtube" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--youtube_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#youtube_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://twitter.com/juventusfcen" target=_blank title="Twitter" text="Twitter" alt="Twitter" aria-label="Twitter" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--twitter_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#twitter_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.tiktok.com/@juventus" target=_blank title="TikTok" text="TikTok" alt="TikTok" aria-label="TikTok" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--douyin_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#douyin_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.twitch.tv/juventus" target=_blank title="Twitch" text="Twitch" alt="Twitch" aria-label="Twitch" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--twitch_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#twitch_circle'></use></svg></span>                </a>
+            </li>
+</ul>
+  </div>
+  <div class="d3-o-nav__wrap">
+    <div class="d3-o-nav-item d3-o-nav-item--left">
+      <div class="d3-o-nav-item--main">
+          <button class="d3-o-nav__hamburger" aria-pressed="false" aria-label="Toggle Navigation">
+            <span class="d3-o-hamburger">
+              <span class="d3-o-hamburger__inner">
+                <span class="d3-o-screen-reader-content">
+                  Hamburger menu
+                </span>
+              </span>
+            </span>
+          </button>
+            <div class="oc-c-hamburger__overlay"></div>
+            <nav role="navigation" class="oc-c-hamburger">
+              
+
+
+
+
+
+
+
+
+<ul class="d3-o-nav__list d3-o-list">
+    <li class="d3-o-nav__item mobile-only d3-o--nav__item-first-level">
+      
+        <a href="/en/tickets/" 
+            text="Tickets" alt="Tickets" aria-label="Tickets">
+          
+Tickets  
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>        </a>
+    
+        <ul class="d3-o-nav__sublist">
+          <li class="d3-o-nav__subitem-hidden d3-o-nav__subitem-back">
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>
+            <span>
+              Tickets
+            </span>
+          </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/tickets/" 
+            text="Overview" alt="Overview" aria-label="Overview">
+          
+Overview  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/tickets/?#mensfirstteam" 
+            text="Standard" alt="Standard" aria-label="Standard">
+          
+Standard  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/tickets/?#viphospitality" 
+            text="VIP Hospitality" alt="VIP Hospitality" aria-label="VIP Hospitality">
+          
+VIP Hospitality  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/tickets/?#parking" 
+            text="Parking" alt="Parking" aria-label="Parking">
+          
+Parking  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/tickets/museum-tour/" 
+            text="Museum &amp; Tour" alt="Museum &amp; Tour" aria-label="Museum &amp; Tour">
+          
+Museum &amp; Tour  
+
+        </a>
+    
+            </li>
+        </ul>
+    </li>
+    <li class="d3-o-nav__item mobile-only ">
+      
+        <a href="https://store.juventus.com/gb?utm_source=juventus.com&amp;utm_medium=menu&amp;utm_campaign=sitoclub" target=_blank
+           rel=noopener text="Shop" alt="Shop" aria-label="Shop">
+          
+Shop  
+
+        </a>
+    
+    </li>
+    <li class="d3-o-nav__item mobile-only d3-o--nav__item-first-level">
+      
+        <a href="/en/bianconeri/" 
+            text="Bianconeri" alt="Bianconeri" aria-label="Bianconeri">
+          
+Bianconeri  
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>        </a>
+    
+        <ul class="d3-o-nav__sublist">
+          <li class="d3-o-nav__subitem-hidden d3-o-nav__subitem-back">
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>
+            <span>
+              Bianconeri
+            </span>
+          </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/bianconeri/" 
+            text="Overview" alt="Overview" aria-label="Overview">
+          
+Overview  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/bianconeri/?#membership" 
+            text="Membership" alt="Membership" aria-label="Membership">
+          
+Membership  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/bianconeri/official-fan-club/" 
+            text="Official Fan Club" alt="Official Fan Club" aria-label="Official Fan Club">
+          
+Official Fan Club  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/bianconeri/?#juventuscard" 
+            text="Juventus Card" alt="Juventus Card" aria-label="Juventus Card">
+          
+Juventus Card  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/bianconeri/?#app" 
+            text="App" alt="App" aria-label="App">
+          
+App  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/bianconeri/?#fanengagement" 
+            text="Fan Experience" alt="Fan Experience" aria-label="Fan Experience">
+          
+Fan Experience  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/bianconeri/?#summertour" 
+            text="Summer Tour" alt="Summer Tour" aria-label="Summer Tour">
+          
+Summer Tour  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/bianconeri/supporter-liaison-officer" 
+            text="SLO" alt="SLO" aria-label="SLO">
+          
+SLO  
+
+        </a>
+    
+            </li>
+        </ul>
+    </li>
+    <li class="d3-o-nav__item mobile-only ">
+      
+        <a href="/en/juventus-tv/?utm_source=juventus.com&amp;utm_medium=internal&amp;utm_campaign=jtv-internal&amp;utm_content=menu" 
+            text="Video" alt="Video" aria-label="Video">
+          
+Video  
+
+        </a>
+    
+    </li>
+    <li class="d3-o-nav__item  d3-o--nav__item-first-level">
+      
+        <a href="#" 
+            text="News" alt="News" aria-label="News">
+          
+News  
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>        </a>
+    
+        <ul class="d3-o-nav__sublist">
+          <li class="d3-o-nav__subitem-hidden d3-o-nav__subitem-back">
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>
+            <span>
+              News
+            </span>
+          </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/news/" 
+            text="Latest News" alt="Latest News" aria-label="Latest News">
+          
+Latest News  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/news/articles/" 
+            text="Articles" alt="Articles" aria-label="Articles">
+          
+Articles  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/news/galleries/" 
+            text="Galleries" alt="Galleries" aria-label="Galleries">
+          
+Galleries  
+
+        </a>
+    
+            </li>
+        </ul>
+    </li>
+    <li class="d3-o-nav__item  d3-o--nav__item-first-level">
+      
+        <a href="#" 
+            text="Teams" alt="Teams" aria-label="Teams">
+          
+Teams  
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>        </a>
+    
+        <ul class="d3-o-nav__sublist">
+          <li class="d3-o-nav__subitem-hidden d3-o-nav__subitem-back">
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>
+            <span>
+              Teams
+            </span>
+          </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/teams/first-team-men/" 
+            text="First Team Men" alt="First Team Men" aria-label="First Team Men">
+          
+First Team Men  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/teams/first-team-women/" 
+            text="Women" alt="Women" aria-label="Women">
+          
+Women  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/teams/next-gen/" 
+            text="Next Gen" alt="Next Gen" aria-label="Next Gen">
+          
+Next Gen  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/teams/under-20-men/" 
+            text="U20 M" alt="U20 M" aria-label="U20 M">
+          
+U20 M  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/teams/under-19-women/" 
+            text="U19 W" alt="U19 W" aria-label="U19 W">
+          
+U19 W  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/teams/youth-men/" 
+            text="Youth Men" alt="Youth Men" aria-label="Youth Men">
+          
+Youth Men  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/teams/youth-women/" 
+            text="Youth Women" alt="Youth Women" aria-label="Youth Women">
+          
+Youth Women  
+
+        </a>
+    
+            </li>
+        </ul>
+    </li>
+    <li class="d3-o-nav__item  d3-o--nav__item-first-level">
+      
+        <a href="#" 
+            text="Club" alt="Club" aria-label="Club">
+          
+Club  
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>        </a>
+    
+        <ul class="d3-o-nav__sublist">
+          <li class="d3-o-nav__subitem-hidden d3-o-nav__subitem-back">
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>
+            <span>
+              Club
+            </span>
+          </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/club/" 
+            text="Overview" alt="Overview" aria-label="Overview">
+          
+Overview  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/club/?#companyoverview" 
+            text="About Us" alt="About Us" aria-label="About Us">
+          
+About Us  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/club/logo" 
+            text="Logo" alt="Logo" aria-label="Logo">
+          
+Logo  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/club/?#places" 
+            text="Places" alt="Places" aria-label="Places">
+          
+Places  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/club/corporate-governance/" 
+            text="Corporate Governance" alt="Corporate Governance" aria-label="Corporate Governance">
+          
+Corporate Governance  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/club/investor-relations/" 
+            text="Investor Relations" alt="Investor Relations" aria-label="Investor Relations">
+          
+Investor Relations  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/club/press-room" 
+            text="Press Room" alt="Press Room" aria-label="Press Room">
+          
+Press Room  
+
+        </a>
+    
+            </li>
+        </ul>
+    </li>
+    <li class="d3-o-nav__item  ">
+      
+        <a href="https://careers.juventus.com/" 
+            text="Join Us" alt="Join Us" aria-label="Join Us">
+          
+Join Us  
+
+        </a>
+    
+    </li>
+    <li class="d3-o-nav__item  ">
+      
+        <a href="https://weareyouth.juventus.com/en/?utm_source=juventus.com&amp;utm_medium=internal&amp;utm_campaign=weareyouth-internal&amp;utm_content=en-juve&amp;utm_term=landing" 
+            text="We Are Youth Since 1897" alt="We Are Youth Since 1897" aria-label="We Are Youth Since 1897">
+          
+We Are Youth Since 1897  
+
+        </a>
+    
+    </li>
+    <li class="d3-o-nav__item  ">
+      
+        <a href="/en/hall-of-fame" 
+            text="Hall of Fame" alt="Hall of Fame" aria-label="Hall of Fame">
+          
+Hall of Fame  
+
+        </a>
+    
+    </li>
+    <li class="d3-o-nav__item  d3-o--nav__item-first-level">
+      
+        <a href="#" 
+            text="Allianz Stadium" alt="Allianz Stadium" aria-label="Allianz Stadium">
+          
+Allianz Stadium  
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>        </a>
+    
+        <ul class="d3-o-nav__sublist">
+          <li class="d3-o-nav__subitem-hidden d3-o-nav__subitem-back">
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>
+            <span>
+              Allianz Stadium
+            </span>
+          </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/allianz-stadium/" 
+            text="Overview" alt="Overview" aria-label="Overview">
+          
+Overview  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/allianz-stadium/our-home" 
+            text="Our home" alt="Our home" aria-label="Our home">
+          
+Our home  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/allianz-stadium/?#directionsandaccess" 
+            text="Directions and Access" alt="Directions and Access" aria-label="Directions and Access">
+          
+Directions and Access  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/allianz-stadium/?#welcomeandevents" 
+            text="Welcome And Events" alt="Welcome And Events" aria-label="Welcome And Events">
+          
+Welcome And Events  
+
+        </a>
+    
+            </li>
+        </ul>
+    </li>
+    <li class="d3-o-nav__item  d3-o--nav__item-first-level">
+      
+        <a href="#" 
+            text="Academy" alt="Academy" aria-label="Academy">
+          
+Academy  
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>        </a>
+    
+        <ul class="d3-o-nav__sublist">
+          <li class="d3-o-nav__subitem-hidden d3-o-nav__subitem-back">
+
+<span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>
+            <span>
+              Academy
+            </span>
+          </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/academy/" 
+            text="Overview" alt="Overview" aria-label="Overview">
+          
+Overview  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/academy/national-academy/" 
+            text="National Academy" alt="National Academy" aria-label="National Academy">
+          
+National Academy  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="https://camp.juventus.com/en/" target=_blank
+           rel=noopener text="Summer Camp" alt="Summer Camp" aria-label="Summer Camp">
+          
+Summer Camp  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/academy/year-round-training" 
+            text="Academy International" alt="Academy International" aria-label="Academy International">
+          
+Academy International  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/academy/training-camp" 
+            text="Training Camp" alt="Training Camp" aria-label="Training Camp">
+          
+Training Camp  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/academy/training-experience" 
+            text="Training Experience" alt="Training Experience" aria-label="Training Experience">
+          
+Training Experience  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/academy/world-cup/" 
+            text="Academy World Cup" alt="Academy World Cup" aria-label="Academy World Cup">
+          
+Academy World Cup  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/academy/training-session" 
+            text="Resort Experience" alt="Resort Experience" aria-label="Resort Experience">
+          
+Resort Experience  
+
+        </a>
+    
+            </li>
+            <li class="d3-o-nav__subitem-hidden">
+              
+        <a href="/en/academy/locator" 
+            text="Academy Locator" alt="Academy Locator" aria-label="Academy Locator">
+          
+Academy Locator  
+
+        </a>
+    
+            </li>
+        </ul>
+    </li>
+    <li class="d3-o-nav__item  ">
+      
+        <a href="/en/partners/" 
+            text="Partners" alt="Partners" aria-label="Partners">
+          
+Partners  
+
+        </a>
+    
+    </li>
+    <li class="d3-o-nav__item  ">
+      
+        <a href="/en/sustainability/" 
+            text="Sustainability" alt="Sustainability" aria-label="Sustainability">
+          
+Sustainability  
+
+        </a>
+    
+    </li>
+    <li class="d3-o-nav__item  ">
+      
+        <a href="/en/juventus-forward" 
+            text="Innovation" alt="Innovation" aria-label="Innovation">
+          
+Innovation  
+
+        </a>
+    
+    </li>
+</ul>
+
+<ul class="d3-o-nav__list d3-o-list">
+    <li class="d3-o-nav__item d3-o-nav__search">
+      <a href="/en/search">Search</a>
+    </li>
+
+  <!-- Social -->
+  <li class="d3-o-nav__item d3-o-nav__social">
+
+
+
+<ul class="jcom-o-nav__socials">
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.facebook.com/Juventus/" target=_blank title="Facebook" text="Facebook" alt="Facebook" aria-label="Facebook" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--facebook_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#facebook_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://instagram.com/juventus" target=_blank title="Instagram" text="Instagram" alt="Instagram" aria-label="Instagram" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--instagram_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#instagram_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.threads.net/@juventus" target=_blank title="Threads" text="Threads" alt="Threads" aria-label="Threads" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--threads_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#threads_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.youtube.com/juventus" target=_blank title="Youtube" text="Youtube" alt="Youtube" aria-label="Youtube" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--youtube_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#youtube_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://twitter.com/juventusfcen" target=_blank title="Twitter" text="Twitter" alt="Twitter" aria-label="Twitter" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--twitter_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#twitter_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.tiktok.com/@juventus" target=_blank title="TikTok" text="TikTok" alt="TikTok" aria-label="TikTok" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--douyin_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#douyin_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.twitch.tv/juventus" target=_blank title="Twitch" text="Twitch" alt="Twitch" aria-label="Twitch" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--twitch_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#twitch_circle'></use></svg></span>                </a>
+            </li>
+</ul>
+  </li>
+
+  <!-- Sponsor -->
+  <li class="d3-o-nav__item d3-o-nav__sponsor">
+    <!-- Sponsors -->
+    <ul class="d3-o-nav__list">
+          <li class="d3-o-nav__item">
+            <a class="jcom-o-sponsors-nav__link" alt="Adidas" text="Adidas" aria-label="Adidas" id="menu_item_jcom_adidas"
+               href="https://www.adidas.co.uk" target=_blank
+               rel=noopener>
+
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--adidas" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#adidas'></use></svg></span>
+            </a>
+          </li>
+          <li class="d3-o-nav__item">
+            <a class="jcom-o-sponsors-nav__link" alt="Jeep" text="Jeep" aria-label="Jeep" id="menu_item_jcom_jeep"
+               href="https://www.jeep-official.it/" target=_blank
+               rel=noopener>
+
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--jeep" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#jeep'></use></svg></span>
+            </a>
+          </li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+
+          <nav role="navigation" class="d3-o-nav--primary">
+            
+
+
+
+<ul class="d3-o-p-nav__list d3-o-list">
+        <li class="d3-o-p-nav__item ">
+
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--tickets" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#tickets'></use></svg></span>
+            <a href="/en/tickets/" 
+             text="Tickets" alt="Tickets" id="menu_item_jcom_tickets" aria-label="Tickets">
+                
+Tickets    
+            </a>
+        </li>
+        <li class="d3-o-p-nav__item ">
+
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--shop" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#shop'></use></svg></span>
+            <a href="https://store.juventus.com/gb?utm_source=juventus.com&amp;utm_medium=menu&amp;utm_campaign=sitoclub" target=_blank
+            rel=noopener text="Shop" alt="Shop" id="menu_item_jcom_shop" aria-label="Shop">
+                
+Shop    
+            </a>
+        </li>
+        <li class="d3-o-p-nav__item ">
+
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--fans-2" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#fans-2'></use></svg></span>
+            <a href="/en/bianconeri/" 
+             text="Bianconeri" alt="Bianconeri" id="menu_item_jcom_bianconeri" aria-label="Bianconeri">
+                
+Bianconeri    
+            </a>
+        </li>
+        <li class="d3-o-p-nav__item ">
+
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--play" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#play'></use></svg></span>
+            <a href="/en/video/" 
+             text="video" alt="video" id="menu_item_video" aria-label="video">
+                
+video    
+            </a>
+        </li>
+        <li class="d3-o-p-nav__item ">
+
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--more_vertical" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#more_vertical'></use></svg></span>
+            <a href="#" 
+             text="More" alt="More" id="menu_item_jcom_more" aria-label="More">
+                
+More    
+            </a>
+        </li>
+</ul>
+
+          </nav>
+      </div>
+      <a class="d3-o-nav__logo" href="/en/" alt="Link To Homepage" title="Link To Homepage" aria-label="Link To Homepage">
+          <img class="d3-o-site-logo" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/logo/juventus_logo_white" alt="Link To Homepage" />
+      </a>
+    </div>
+
+    <div class="d3-o-nav-item d3-o-nav-item--right">
+        <!-- Sponsors -->
+        <div class="jcom-o-sponsors">
+          <div class="jcom-o-sponsors-nav">
+            
+
+
+
+
+
+
+      <ul class="d3-o-list jcom-o-sponsors-nav__child jcom-o-sponsors-nav__main-sponsor"  data-country='<esi:vars>$(GEO{'country_code'})</esi:vars>'  >
+
+      <li class="d3-o-nav__item ">
+          <a class="jcom-o-sponsors-nav__link" alt="Adidas" text="Adidas" aria-label="Adidas" href="https://www.adidas.co.uk/football" target=_blank
+             rel=noopener>
+
+      <div class="jcom-o-sponsors-nav__img-container">
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--adidas" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#adidas'></use></svg></span>
+      </div>
+              </a>
+      </li>
+    
+      <li class="d3-o-nav__item ">
+          <a class="jcom-o-sponsors-nav__link" alt="Jeep" text="Jeep" aria-label="Jeep" href="https://www.jeep-official.it/" target=_blank
+             rel=noopener>
+
+      <div class="jcom-o-sponsors-nav__img-container">
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--jeep" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#jeep'></use></svg></span>
+      </div>
+              </a>
+      </li>
+          </ul>
+    
+          </div>
+        </div>
+
+        <nav role="navigation" class="d3-o-nav--secondary">
+          
+
+
+
+<ul class="d3-o-nav__list d3-o-list">
+        <li class="d3-o-nav__item">
+                <a href=# 
+                 title="Search" alt="Search" id="menu_item_jcom_search">
+
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--search" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#search'></use></svg></span>                </a>
+        </li>
+        <li class="d3-o-nav__item d3-o-nav__item__help">
+                <a href=/en/faq/ 
+                 title="Help" alt="Help" id="menu_item_jcom_help">
+
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--help" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#help'></use></svg></span>                </a>
+        </li>
+        <li class="d3-o-nav__item">
+                <a href=/en/api/v1/account/login 
+                 title="Login" alt="Login" id="menu_item_jcom_login">
+
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--login" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#login'></use></svg></span>                </a>
+        </li>
+        <li class="d3-o-nav__item">
+                <a  
+                 title="Logged" alt="Logged" id="menu_item_jcom_logged">
+
+                        <img id="loggedImage" title="Logged" alt="Logged" data-accountUrl="https://account.juventus.com" />
+                </a>
+        </li>
+</ul>
+        </nav>
+    </div>
+  </div>
+
+  <!-- Searchbar -->
+  <div class="jcom-c-searchbar__header">
+    <form autocomplete="off" id="header_searchbar" class="jcom-c-searchbar header-searchbar" js-searchbar action="/en/search">
+      <div class="jcom-c-searchbar-header__input-wrapper">
+        <input type="text" required id="q" name="q" aria-label="q" value="" />
+        <label for="q" data-placeholder-mobile="Search" data-placeholder-desktop="Write here to start the search" data-autocomplete-url=/en/api/v1/search/autocomplete></label>
+        <button type="button" id="menu_item_jcom_searchbar_close_btn" class="jcom-c-searchbar-close-btn" aria-label="Close">
+<span class="oc-o-icon oc-o-icon--medium oc-o-icon--white"><svg class="oc-o-icon--close" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#close'></use></svg></span>
+        </button>
+      </div>
+      <button type="submit" id="menu_item_jcom_searchbar_submit_btn" class="jcom-c-searchbar__search-btn" aria-label="Search">
+
+<span class="oc-o-icon oc-o-icon--medium oc-o-icon--white"><svg class="oc-o-icon--search" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#search'></use></svg></span>
+        <span class="button-text">Search</span>
+      </button>
+    </form>
+  </div>
+
+</header>
+
+
+<div class="jcom-userinfo hidden">
+  <div class="jcom-userinfo__title">Account</div>
+  <span class="jcom-userinfo__close">
+<span class="oc-o-icon oc-o-icon--medium oc-o-icon--white"><svg class="oc-o-icon--close" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#close'></use></svg></span>  </span>
+  <div class="jcom-userinfo__data">
+    <div class="jcom-userinfo__profile"><a href="/en/api/v1/account/userprofile">Your Profile</a></div>
+    <div class="jcom-userinfo__logout"><a href="/en/api/v1/account/logout">Logout</a></div>
+  </div>
+
+  <div class="jcom-userinfo__overlay"></div>
+</div>    <main role="main" id="main-content">
+            
+
+
+
+
+  <div class="custom-header custom-header--subsection">
+    <div class="jcom-static-header ">
+      <!-- Media -->
+          <figure class="d3-o-media-object__figure ">
+<picture class="d3-o-media-object__picture lazy"><!--[if IE 9]><video style="display: none; "><![endif]--><source data-srcset="https://www.juventus.com/images/image/private/t_header_wide/f_auto/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg 1x, https://www.juventus.com/images/image/private/t_header_wide_2x/f_auto/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg 2x, https://www.juventus.com/images/image/private/t_header_wide_3x/f_auto/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg 3x" media="(min-width:1024px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></source><source data-srcset="https://www.juventus.com/images/image/private/t_header_wide_tablet/f_auto/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg 1x, https://www.juventus.com/images/image/private/t_header_wide_tablet_2x/f_auto/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg 2x, https://www.juventus.com/images/image/private/t_header_wide_tablet_3x/f_auto/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg 3x" media="(min-width:768px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></source><source data-srcset="https://www.juventus.com/images/image/private/t_portrait_tablet_desktop/f_auto/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg 1x, https://www.juventus.com/images/image/private/t_portrait_tablet_desktop_2x/f_auto/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg 2x, https://www.juventus.com/images/image/private/t_portrait_tablet_desktop_3x/f_auto/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg 3x" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></source><!--[if IE 9]></video><![endif]--><img alt="Oops web-app" class="img-responsive" data-src="https://www.juventus.com/images/image/private/t_portrait_tablet_desktop/f_auto/v1655134928/dev/trqh2cmxeckjyzvaew2r.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></img></picture>          </figure>
+
+      <!-- Header title -->
+        <h1 class="jcom-static-header__title ">
+          <span>Oops!</span>
+        </h1>
+
+      <div class="jcom-c-hero-showcase__topcontent__splashcta jcom-c-hero-showcase__topcontent__splashcta--down">
+          <button type="button" aria-hidden="true" class="splash-down" tabindex="-1" title="Watch Video"><span>‹</span></button>
+      </div>
+    </div>
+  </div>
+
+<script type="application/ld&#x2B;json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Juventus Football Club - Official Website","item":"https://www.juventus.com/en"}]}</script>
+<div class="anchors-menu">
+  <ul class="anchors-list">
+    <li class="anchor anchor-placeholder"><a href="#DFDFD">anchor</a></li>
+  </ul>
+</div>
+
+
+
+
+  <section class="d3-l-grid--outer d3-l-section-row">
+    <div class="d3-l-grid--inner">
+
+      <div class="d3-l-col__col-3">
+      </div>
+
+      <div class="d3-l-col__col-6">
+
+
+
+
+
+<div class="jcom-promo-easy">
+  <div class="jcom-promo-title">
+    <h2>
+      Something went wrong
+    </h2>
+  </div>
+  <p>Returning to the Home Page is not important. It's the only thing that matters.</p>
+
+  <div class="jcom-promo-ctas" id="id_b14811c2-aa4e-4fcd-a8a5-90df36e259ba">
+<a href='https://www.juventus.com/en' alt='Homepage' text='Homepage' aria-label='Homepage'  id=''><div class='cta cta--large '>Homepage<span class="oc-o-icon oc-o-icon--small"><svg class="oc-o-icon--double-arrow" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#double-arrow'></use></svg></span></div></a>  </div>
+</div>      </div>
+
+      <div class="d3-l-col__col-3">
+      </div>
+    </div>
+  </section>
+
+
+
+
+<section class="jcom-c-searchbar-row d3-l-section-row">
+  <h2 style='height:0;opacity:0;'>Search</h2>
+
+  <form autocomplete="off" id="footer_searchbar" class="jcom-c-searchbar" js-searchbar-bar action="/en/search">
+    <div class="jcom-c-searchbar__input-wrapper">
+      <input type="text" required id="qbar" name="q" aria-label="qbar" value="">
+      <label for="qbar" data-placeholder-mobile="Search" data-placeholder-desktop="Didn&#x27;t find what you were looking for?"></label>
+    </div>
+
+    <div class="jcom-search-button__icon-search -active">
+      <button type="submit" aria-label="Search">
+        <span class="oc-o-icon oc-o-icon--x-large oc-o-icon--white"><svg class="oc-o-icon--search" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#search'></use></svg></span>
+      </button>
+    </div>
+    <div class="jcom-search-button__icon-close">
+      <button type="button" aria-label="Close">
+        <span class="oc-o-icon oc-o-icon--x-large oc-o-icon--white"><svg class="oc-o-icon--close" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#close'></use></svg></span>
+      </button>
+    </div>
+  </form>
+
+  <div class="d3-l-grid--outer d3-l-section-row jcom-c-searchbar-row__block-cont">
+    <div class="d3-l-grid--inner">
+      <div class="d3-l-col__col-3">
+        <div class="jcom-c-searchbar-row__block"></div>
+      </div>
+    </div>
+  </div>
+</section><style type="text/css">
+.d3-l-wrap { background-color: black }
+.anchors-menu { visibility: hidden }
+.jcom-promo-easy .jcom-promo-title { text-align: left; color: white }
+.jcom-promo-easy p { text-align: left }
+.jcom-promo-easy .jcom-promo-ctas { align-self: flex-start }
+.splash-down { visibility: hidden }
+</style>
+    </main>
+
+
+
+
+
+<div class="jcom-o-footer-section">
+    <div>
+        <footer class="oc-o-footer jcom-o-footer" role="contentinfo">
+            <!---------- First row ---------->
+            <div class="jcom-o-footer__corporate jcom-o-footer-social-link-wrapper jcom-o-footer__container">
+                <!-- Logo -->
+                <div class="oc-o-footer__img">
+                    <a class="d3-o-nav__logo" href="/" alt="Link To Homepage" title="Link To Homepage" aria-label="Link To Homepage" >
+                            <img class="d3-o-site-logo"
+                                 src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/logo/juventus_logo_white.png"
+                                 alt="Link To Homepage" />
+                    </a>
+                </div>
+                <div class="d3-o-appstore-social-container">
+                    <!-- Social -->
+                    <div class="d3-o-social">
+
+
+
+<ul class="jcom-o-nav__socials">
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.facebook.com/Juventus/" target=_blank title="Facebook" text="Facebook" alt="Facebook" aria-label="Facebook" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--facebook_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#facebook_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://instagram.com/juventus/" target=_blank title="Instagram" text="Instagram" alt="Instagram" aria-label="Instagram" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--instagram_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#instagram_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.threads.net/@juventus" target=_blank title="Threads" text="Threads" alt="Threads" aria-label="Threads" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--threads_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#threads_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.youtube.com/juventus" target=_blank title="Youtube" text="Youtube" alt="Youtube" aria-label="Youtube" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--youtube_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#youtube_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://twitter.com/juventusfcen" target=_blank title="Twitter" text="Twitter" alt="Twitter" aria-label="Twitter" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--twitter_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#twitter_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.tiktok.com/@juventus" target=_blank title="TikTok" text="TikTok" alt="TikTok" aria-label="TikTok" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--douyin_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#douyin_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.linkedin.com/company/juventus-football-club/" target=_blank title="Linkedin" text="Linkedin" alt="Linkedin" aria-label="Linkedin" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--linkedin_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#linkedin_circle'></use></svg></span>                </a>
+            </li>
+            <li class="d3-o-nav__item jcom-o-nav__socials__logo">
+                <a href="https://www.twitch.tv/juventus" target=_blank title="Twitch" text="Twitch" alt="Twitch" aria-label="Twitch" rel="noopener">
+
+<span class="oc-o-icon oc-o-icon--medium"><svg class="oc-o-icon--twitch_circle" viewBox="0 0 50 50"><use xlink:href='/assets/icons/icons.svg#twitch_circle'></use></svg></span>                </a>
+            </li>
+</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="jcom-o-footer__grey-line jcom-o-footer__container"></div>
+            <!---------- Second row ---------->
+            <!-- Footer_nav -->
+            <div class="d3-o-nav__wrap jcom-o-footer-links-wrapper jcom-o-footer__container">
+                
+
+
+
+<div class="d3-l-grid--outer d3-l-section-row jcom-o-sponsors-nav">
+  <div class="d3-l-grid--inner">
+    <div class="d3-l-col__col-12">
+      <ul class="d3-o-nav__list d3-o-list">
+          <li class="d3-o-nav__item jcom-o-sponsors-nav__parent">
+              <div class="jcom-o-social-nav__header-child">
+                  <a class="jcom-o-sponsors-nav__link" alt="Tickets" title="Tickets" text="Tickets" aria-label="Tickets" href="/en/tickets/" >
+                    
+    <span>
+Tickets    </span>
+  
+                  </a>
+              </div>
+
+  <ul class="d3-o-nav__list d3-o-list jcom-o-social-nav__child">
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Standard" title="Standard" text="Standard" aria-label="Standard" href="/en/tickets/?#mensfirstteam"
+             
+             >
+
+    <span>
+Standard    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="VIP Hospitality" title="VIP Hospitality" text="VIP Hospitality" aria-label="VIP Hospitality" href="/en/tickets/?#viphospitality"
+             
+             >
+
+    <span>
+VIP Hospitality    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Parking" title="Parking" text="Parking" aria-label="Parking" href="/en/tickets/?#parking"
+             
+             >
+
+    <span>
+Parking    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Museum &amp; Tour" title="Museum &amp; Tour" text="Museum &amp; Tour" aria-label="Museum &amp; Tour" href="/en/tickets/museum-tour/"
+             
+             >
+
+    <span>
+Museum &amp; Tour    </span>
+            </a>
+      </li>
+  </ul>
+          </li>
+          <li class="d3-o-nav__item jcom-o-sponsors-nav__parent">
+              <div class="jcom-o-social-nav__header-child">
+                  <a class="jcom-o-sponsors-nav__link" alt="Bianconeri" title="Bianconeri" text="Bianconeri" aria-label="Bianconeri" href="/en/bianconeri/" >
+                    
+    <span>
+Bianconeri    </span>
+  
+                  </a>
+              </div>
+
+  <ul class="d3-o-nav__list d3-o-list jcom-o-social-nav__child">
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Membership" title="Membership" text="Membership" aria-label="Membership" href="/en/bianconeri/?#membership"
+             
+             >
+
+    <span>
+Membership    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Official Fan Club" title="Official Fan Club" text="Official Fan Club" aria-label="Official Fan Club" href="https://officialfanclub.juventus.com/en/index"
+             target=_blank
+             rel=noopener>
+
+    <span>
+Official Fan Club    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Juventus Card" title="Juventus Card" text="Juventus Card" aria-label="Juventus Card" href="/en/bianconeri/?#juventuscard"
+             
+             >
+
+    <span>
+Juventus Card    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="App" title="App" text="App" aria-label="App" href="/en/bianconeri/?#app"
+             
+             >
+
+    <span>
+App    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Fan Experience" title="Fan Experience" text="Fan Experience" aria-label="Fan Experience" href="/en/bianconeri/?#fanengagement"
+             
+             >
+
+    <span>
+Fan Experience    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="SLO" title="SLO" text="SLO" aria-label="SLO" href="/en/bianconeri/supporter-liaison-officer"
+             
+             >
+
+    <span>
+SLO    </span>
+            </a>
+      </li>
+  </ul>
+          </li>
+          <li class="d3-o-nav__item jcom-o-sponsors-nav__parent">
+              <div class="jcom-o-social-nav__header-child">
+                  <a class="jcom-o-sponsors-nav__link" alt="Teams" title="Teams" text="Teams" aria-label="Teams" href="/en/teams/first-team-men/" >
+                    
+    <span>
+Teams    </span>
+  
+                  </a>
+              </div>
+
+  <ul class="d3-o-nav__list d3-o-list jcom-o-social-nav__child">
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="First Team Men" title="First Team Men" text="First Team Men" aria-label="First Team Men" href="/en/teams/first-team-men/"
+             
+             >
+
+    <span>
+First Team Men    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Women" title="Women" text="Women" aria-label="Women" href="/en/teams/first-team-women/"
+             
+             >
+
+    <span>
+Women    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Next Gen" title="Next Gen" text="Next Gen" aria-label="Next Gen" href="/en/teams/next-gen/squad/"
+             
+             >
+
+    <span>
+Next Gen    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="U20 M" title="U20 M" text="U20 M" aria-label="U20 M" href="/en/teams/under-20-men/squad/"
+             
+             >
+
+    <span>
+U20 M    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="U19 W" title="U19 W" text="U19 W" aria-label="U19 W" href="/en/teams/under-19-women/squad/"
+             
+             >
+
+    <span>
+U19 W    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Youth Men" title="Youth Men" text="Youth Men" aria-label="Youth Men" href="/en/teams/youth-men/"
+             
+             >
+
+    <span>
+Youth Men    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Youth Women" title="Youth Women" text="Youth Women" aria-label="Youth Women" href="/en/teams/youth-women/"
+             
+             >
+
+    <span>
+Youth Women    </span>
+            </a>
+      </li>
+  </ul>
+          </li>
+          <li class="d3-o-nav__item jcom-o-sponsors-nav__parent">
+              <div class="jcom-o-social-nav__header-child">
+                  <a class="jcom-o-sponsors-nav__link" alt="Club" title="Club" text="Club" aria-label="Club" href="/en/club/" >
+                    
+    <span>
+Club    </span>
+  
+                  </a>
+              </div>
+
+  <ul class="d3-o-nav__list d3-o-list jcom-o-social-nav__child">
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="About Us" title="About Us" text="About Us" aria-label="About Us" href="/en/club/?#companyoverview"
+             
+             >
+
+    <span>
+About Us    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Places" title="Places" text="Places" aria-label="Places" href="/en/club/?#places"
+             
+             >
+
+    <span>
+Places    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Corporate Governance" title="Corporate Governance" text="Corporate Governance" aria-label="Corporate Governance" href="/en/club/corporate-governance/"
+             
+             >
+
+    <span>
+Corporate Governance    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Investor Relations" title="Investor Relations" text="Investor Relations" aria-label="Investor Relations" href="/en/club/investor-relations/"
+             
+             >
+
+    <span>
+Investor Relations    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Press Room" title="Press Room" text="Press Room" aria-label="Press Room" href="/en/club/press-room"
+             
+             >
+
+    <span>
+Press Room    </span>
+            </a>
+      </li>
+  </ul>
+          </li>
+          <li class="d3-o-nav__item jcom-o-sponsors-nav__parent">
+              <div class="jcom-o-social-nav__header-child">
+                  <a class="jcom-o-sponsors-nav__link" alt="Allianz Stadium" title="Allianz Stadium" text="Allianz Stadium" aria-label="Allianz Stadium" href="/en/allianz-stadium/" >
+                    
+    <span>
+Allianz Stadium    </span>
+  
+                  </a>
+              </div>
+
+  <ul class="d3-o-nav__list d3-o-list jcom-o-social-nav__child">
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Our home" title="Our home" text="Our home" aria-label="Our home" href="/en/allianz-stadium/our-home"
+             
+             >
+
+    <span>
+Our home    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Directions and Access" title="Directions and Access" text="Directions and Access" aria-label="Directions and Access" href="/en/allianz-stadium/?#directionsandaccess"
+             
+             >
+
+    <span>
+Directions and Access    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Welcome And Events" title="Welcome And Events" text="Welcome And Events" aria-label="Welcome And Events" href="/en/allianz-stadium/?#welcomeandevents"
+             
+             >
+
+    <span>
+Welcome And Events    </span>
+            </a>
+      </li>
+  </ul>
+          </li>
+          <li class="d3-o-nav__item jcom-o-sponsors-nav__parent">
+              <div class="jcom-o-social-nav__header-child">
+                  <a class="jcom-o-sponsors-nav__link" alt="Academy" title="Academy" text="Academy" aria-label="Academy" href="/en/academy/" >
+                    
+    <span>
+Academy    </span>
+  
+                  </a>
+              </div>
+
+  <ul class="d3-o-nav__list d3-o-list jcom-o-social-nav__child">
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="National Academy" title="National Academy" text="National Academy" aria-label="National Academy" href="/en/academy/national-academy/"
+             
+             >
+
+    <span>
+National Academy    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Summer Camp" title="Summer Camp" text="Summer Camp" aria-label="Summer Camp" href="https://camp.juventus.com"
+             target=_blank
+             rel=noopener>
+
+    <span>
+Summer Camp    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Academy International" title="Academy International" text="Academy International" aria-label="Academy International" href="/en/academy/year-round-training"
+             
+             >
+
+    <span>
+Academy International    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Academy Residency" title="Academy Residency" text="Academy Residency" aria-label="Academy Residency" href="/en/academy/academy-residency"
+             
+             >
+
+    <span>
+Academy Residency    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Training Camp" title="Training Camp" text="Training Camp" aria-label="Training Camp" href="/en/academy/training-camp"
+             
+             >
+
+    <span>
+Training Camp    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Training Experience" title="Training Experience" text="Training Experience" aria-label="Training Experience" href="/en/academy/training-experience"
+             
+             >
+
+    <span>
+Training Experience    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Academy World Cup" title="Academy World Cup" text="Academy World Cup" aria-label="Academy World Cup" href="/en/academy/world-cup/"
+             
+             >
+
+    <span>
+Academy World Cup    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Resort Experience" title="Resort Experience" text="Resort Experience" aria-label="Resort Experience" href="/en/academy/training-session"
+             
+             >
+
+    <span>
+Resort Experience    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Juventus Summer Training Experience" title="Juventus Summer Training Experience" text="Juventus Summer Training Experience" aria-label="Juventus Summer Training Experience" href="/en/academy/juventus-summer-training-experience"
+             
+             >
+
+    <span>
+Juventus Summer Training Experience    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Academy Locator" title="Academy Locator" text="Academy Locator" aria-label="Academy Locator" href="/en/academy/locator"
+             
+             >
+
+    <span>
+Academy Locator    </span>
+            </a>
+      </li>
+  </ul>
+          </li>
+          <li class="d3-o-nav__item jcom-o-sponsors-nav__parent">
+              <div class="jcom-o-social-nav__header-child">
+                  <a class="jcom-o-sponsors-nav__link" alt="News" title="News" text="News" aria-label="News" href="/en/news/" >
+                    
+    <span>
+News    </span>
+  
+                  </a>
+              </div>
+
+  <ul class="d3-o-nav__list d3-o-list jcom-o-social-nav__child">
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Articles" title="Articles" text="Articles" aria-label="Articles" href="/en/news/articles/"
+             
+             >
+
+    <span>
+Articles    </span>
+            </a>
+      </li>
+      <li class="d3-o-nav__item">
+          <a class="jcom-o-sponsors-nav__link" alt="Galleries" title="Galleries" text="Galleries" aria-label="Galleries" href="/en/news/galleries/"
+             
+             >
+
+    <span>
+Galleries    </span>
+            </a>
+      </li>
+  </ul>
+          </li>
+          <li class="d3-o-nav__item jcom-o-sponsors-nav__parent">
+              <div class="jcom-o-social-nav__header-child">
+                  <a class="jcom-o-sponsors-nav__link" alt="Shop" title="Shop" text="Shop" aria-label="Shop" href="https://store.juventus.com/gb?utm_source=juventus.com&amp;utm_medium=menu&amp;utm_campaign=sitoclub" target=_blank>
+                    
+    <span>
+Shop    </span>
+  
+                  </a>
+              </div>
+
+  <ul class="d3-o-nav__list d3-o-list jcom-o-social-nav__child">
+  </ul>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+                <!-- App-store -->
+
+
+
+
+<div class="d3-o-appstore">
+      <div class="d3-o-appstore__wrapper">
+        <div class="d3-o-appstore__img-title">
+    <span>
+Download:<br/>Juventus Official App    </span>
+  </div>
+        <div class="d3-o-appstore__img-container">
+          
+    <a href="https://itunes.apple.com/it/app/juventus/id985645803?mt=8&amp;utm_source=JOA_01&amp;utm_medium=DMP" target=_blank title="Apple Store" text="Apple Store" alt="Apple Store" aria-label="Apple Store" rel="noopener">
+        <img src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/logo/apple_store_button.png" class="d3-o-appstore__img" alt="Apple Store" />
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.juventus.app.android&amp;utm_source=JOA_02&amp;utm_medium=DMP" target=_blank title="Google Play" text="Google Play" alt="Google Play" aria-label="Google Play" rel="noopener">
+        <img src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/logo/google_play_button.png" class="d3-o-appstore__img" alt="Google Play" />
+    </a>
+
+        </div>
+      </div>
+</div>            </div>
+
+            <div class="jcom-o-footer__grey-line jcom-o-footer__container"></div>
+
+            <div class="jcom-o-footer__corporate jcom-o-footer__container">
+                <!-- Sponsors -->
+                <div class="jcom-o-sponsors jcom-o-sponsors__main-sponsors">
+                    <div class="jcom-o-sponsors-nav">
+                        
+
+
+
+
+
+
+      <ul class="d3-o-list jcom-o-sponsors-nav__child jcom-o-sponsors-nav__main-sponsor"  data-country='<esi:vars>$(GEO{'country_code'})</esi:vars>'  >
+
+      <li class="d3-o-nav__item ">
+          <a class="jcom-o-sponsors-nav__link" alt="Adidas" text="Adidas" aria-label="Adidas" href="https://www.adidas.co.uk/football" target=_blank
+             rel=noopener>
+
+      <div class="jcom-o-sponsors-nav__img-container">
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--adidas" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#adidas'></use></svg></span>
+      </div>
+              </a>
+      </li>
+    
+      <li class="d3-o-nav__item ">
+          <a class="jcom-o-sponsors-nav__link" alt="Jeep" text="Jeep" aria-label="Jeep" href="https://www.jeep-official.it/" target=_blank
+             rel=noopener>
+
+      <div class="jcom-o-sponsors-nav__img-container">
+<span class="oc-o-icon oc-o-icon--large"><svg class="oc-o-icon--jeep" viewBox="0 0 228 228"><use xlink:href='/assets/icons/icons.svg#jeep'></use></svg></span>
+      </div>
+              </a>
+      </li>
+          </ul>
+    
+                    </div>
+                </div>
+                <!-- Partners -->
+                <div class="jcom-o-partners">
+                    <div class="jcom-o-sponsors-nav">
+                        
+
+
+
+
+
+
+      <ul class="d3-o-list jcom-o-sponsors-nav__child jcom-o-sponsors-nav__main-sponsor"  data-country='<esi:vars>$(GEO{'country_code'})</esi:vars>'  >
+
+      <li class="d3-o-nav__item ">
+          <a class="jcom-o-sponsors-nav__link" alt="Allianz" text="Allianz" aria-label="Allianz" href="https://www.allianz.com/en.html" target=_blank
+             rel=noopener>
+
+      <div class="jcom-o-sponsors-nav__img-container">
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/z-allianz" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="Allianz" title="Allianz" class="jcom-o-sponsors-nav__img-on-top" />
+            </picture>
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/z-allianz_grey" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="Allianz" title="Allianz" class="jcom-o-sponsors-nav__img" />
+            </picture>
+
+      </div>
+              </a>
+      </li>
+    
+      <li class="d3-o-nav__item ">
+          <a class="jcom-o-sponsors-nav__link" alt="EASports" text="EASports" aria-label="EASports" href="http://x.ea.com/76358" target=_blank
+             rel=noopener>
+
+      <div class="jcom-o-sponsors-nav__img-container">
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/EAS_PRIMARY_LOGO_WHT_SVG-3" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="EASports" title="EASports" class="jcom-o-sponsors-nav__img-on-top" />
+            </picture>
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/EAS_PRIMARY_LOGO_WHT_SVG-3_grey" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="EASports" title="EASports" class="jcom-o-sponsors-nav__img" />
+            </picture>
+
+      </div>
+              </a>
+      </li>
+    
+      <li class="d3-o-nav__item ">
+          <a class="jcom-o-sponsors-nav__link" alt="Cygames" text="Cygames" aria-label="Cygames" href="https://www.cygames.co.jp/en/" target=_blank
+             rel=noopener>
+
+      <div class="jcom-o-sponsors-nav__img-container">
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/zzz-cygames" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="Cygames" title="Cygames" class="jcom-o-sponsors-nav__img-on-top" />
+            </picture>
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/zzz-cygames_grey" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="Cygames" title="Cygames" class="jcom-o-sponsors-nav__img" />
+            </picture>
+
+      </div>
+              </a>
+      </li>
+    
+      <li class="d3-o-nav__item ">
+          <a class="jcom-o-sponsors-nav__link" alt="Visit Detroit" text="Visit Detroit" aria-label="Visit Detroit" href="https://visitdetroit.com/juventus/" target=_blank
+             rel=noopener>
+
+      <div class="jcom-o-sponsors-nav__img-container">
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/visitdetroit" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="Visit Detroit" title="Visit Detroit" class="jcom-o-sponsors-nav__img-on-top" />
+            </picture>
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/visitdetroit_new_grey" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="Visit Detroit" title="Visit Detroit" class="jcom-o-sponsors-nav__img" />
+            </picture>
+
+      </div>
+              </a>
+      </li>
+    
+      <li class="d3-o-nav__item ">
+          <a class="jcom-o-sponsors-nav__link" alt="Balocco" text="Balocco" aria-label="Balocco" href="https://www.balocco.it/" target=_blank
+             rel=noopener>
+
+      <div class="jcom-o-sponsors-nav__img-container">
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/z-balocco" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="Balocco" title="Balocco" class="jcom-o-sponsors-nav__img-on-top" />
+            </picture>
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/z-balocco_grey" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="Balocco" title="Balocco" class="jcom-o-sponsors-nav__img" />
+            </picture>
+
+      </div>
+              </a>
+      </li>
+    
+      <li class="d3-o-nav__item ">
+          <a class="jcom-o-sponsors-nav__link" alt="Ganten" text="Ganten" aria-label="Ganten" href="https://ganten.com.cn/" target=_blank
+             rel=noopener>
+
+      <div class="jcom-o-sponsors-nav__img-container">
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/z-ganten" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="Ganten" title="Ganten" class="jcom-o-sponsors-nav__img-on-top" />
+            </picture>
+            <picture class="lazy">
+                <img data-src="https://www.juventus.com/images/image/upload/juventuscom-prd/sponsors/z-ganten_grey" src="https://www.juventus.com/images/image/upload/f_auto/dev/assets/icons/32x32" alt="Ganten" title="Ganten" class="jcom-o-sponsors-nav__img" />
+            </picture>
+
+      </div>
+              </a>
+      </li>
+          </ul>
+    
+                    </div>
+                </div>
+            </div>
+
+            <!---------- Third row ---------->
+            <div class="jcom-o-footer__corporate-text jcom-o-footer__container jcom-o-footer__menu">
+                <!-- Language combo -->
+                <div class="jcom-o-footer__corporate-text__wrap">
+
+
+
+
+
+<div class="jcom-c-language-selector__wrap">
+  <ul class="d3-o-nav__list d3-o-list">
+        <li class="d3-o-nav__item d3-is-active">
+          <span class="jcom-c-language-selector__current-language">
+            English
+          </span>
+        </li>
+          <li class="d3-o-nav__item">
+            <a href="https://www.juventus.com/it" id="it" text="Italiano" alt="Italiano" aria-label="Italiano" title="Italiano">
+              <span>
+                Italiano
+              </span>
+            </a>
+          </li>
+  </ul>
+
+    <button class="d3-o-nav__arrow" data-type="#language-selector" data-value="dropdown_trigger" text="Language Selector" alt="Language Selector" title="Language Selector">
+      <span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>
+    </button>
+</div>
+                </div>
+                <!-- Footer menu -->
+                <div class="jcom-o-footer__corporate-text__wrap">
+                    
+
+
+
+<div class="d3-l-col__col-12">
+  <ul class="d3-o-list">
+      <li class="d3-o-nav__item">
+        
+  <ul class="d3-o-nav__list d3-o-list">
+    <li class="d3-o-nav__item">
+        <a class="jcom-o-menu-nav__link" alt="Sustainability" title="Sustainability" aria-label="Sustainability" href="/en/sustainability/" 
+           >
+          
+    <span>
+Sustainability    </span>
+  
+        </a>
+    </li>
+  </ul>
+
+      </li>
+      <li class="d3-o-nav__item">
+        
+  <ul class="d3-o-nav__list d3-o-list">
+    <li class="d3-o-nav__item">
+        <a class="jcom-o-menu-nav__link" alt="Rules and Regulations" title="Rules and Regulations" aria-label="Rules and Regulations" href="/en/rules-and-regulations" 
+           >
+          
+    <span>
+Rules and Regulations    </span>
+  
+        </a>
+    </li>
+  </ul>
+
+      </li>
+      <li class="d3-o-nav__item">
+        
+  <ul class="d3-o-nav__list d3-o-list">
+    <li class="d3-o-nav__item">
+        <a class="jcom-o-menu-nav__link" alt="Terms And Conditions" title="Terms And Conditions" aria-label="Terms And Conditions" href="/en/terms-and-conditions" 
+           >
+          
+    <span>
+Terms And Conditions    </span>
+  
+        </a>
+    </li>
+  </ul>
+
+      </li>
+      <li class="d3-o-nav__item">
+        
+  <ul class="d3-o-nav__list d3-o-list">
+    <li class="d3-o-nav__item">
+        <a class="jcom-o-menu-nav__link" alt="Privacy" title="Privacy" aria-label="Privacy" href="/en/privacy" 
+           >
+          
+    <span>
+Privacy    </span>
+  
+        </a>
+    </li>
+  </ul>
+
+      </li>
+      <li class="d3-o-nav__item">
+        
+  <ul class="d3-o-nav__list d3-o-list">
+    <li class="d3-o-nav__item">
+        <a class="jcom-o-menu-nav__link" alt="Cookie Settings" title="Cookie Settings" aria-label="Cookie Settings" href="/en/cookies" 
+           >
+          
+    <span>
+Cookie Settings    </span>
+  
+        </a>
+    </li>
+  </ul>
+
+      </li>
+      <li class="d3-o-nav__item">
+        
+  <ul class="d3-o-nav__list d3-o-list">
+    <li class="d3-o-nav__item">
+        <a class="jcom-o-menu-nav__link" alt="Join Us" title="Join Us" aria-label="Join Us" href="https://careers.juventus.com/" 
+           >
+          
+    <span>
+Join Us    </span>
+  
+        </a>
+    </li>
+  </ul>
+
+      </li>
+      <li class="d3-o-nav__item">
+        
+  <ul class="d3-o-nav__list d3-o-list">
+    <li class="d3-o-nav__item">
+        <a class="jcom-o-menu-nav__link" alt="Contact us" title="Contact us" aria-label="Contact us" href="/en/contact-us/" 
+           >
+          
+    <span>
+Contact us    </span>
+  
+        </a>
+    </li>
+  </ul>
+
+      </li>
+      <li class="d3-o-nav__item">
+        
+  <ul class="d3-o-nav__list d3-o-list">
+    <li class="d3-o-nav__item">
+        <a class="jcom-o-menu-nav__link" alt="FAQ" title="FAQ" aria-label="FAQ" href="/en/faq/" 
+           >
+          
+    <span>
+FAQ    </span>
+  
+        </a>
+    </li>
+  </ul>
+
+      </li>
+  </ul>
+</div>
+
+                </div>
+                <!-- Back to Top -->
+                <div class="jcom-o-footer__corporate-text__wrap back-to-top-wrapper">
+                    <div class="d3-o-nav__item">
+                        <button class="jcom-o-footer__back-to-top">
+                            <span>Back To Top</span>
+                            <span class="oc-o-icon oc-o-icon--x-small"><svg class="oc-o-icon--down" viewBox="0 0 24 24"><use xlink:href='/assets/icons/icons.svg#down'></use></svg></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!---------- Fourth row (copyright) ---------->
+            <div class="jcom-o-footer-copyright">
+                <p class="jcom-o-footer-copyright">
+                    &#xA9; 2026 Juventus Football Club S.p.A.
+                </p>
+                <p class="jcom-o-footer-helpdesk-general-info">
+                    Juventus Football Club S.p.A. Via Druento, 175 10151 Torino - Italia; CONTACT CENTER (+39) 011.45.30.486. Monday to Friday (9 am – 8 pm) and Saturday (9 am – 3 pm), excluding holidays.<br/>The cost of the service changes according to the tariff plan signed with your telecom provider and does not include any additional cost.<br/>Click on CONTACT US to find out about the dedicated contact channels.
+                </p>
+                <p class="jcom-o-footer-helpdesk-general-info">
+                    Share Capital € 16.731.359,80 fully paid up. Companies Register, Tax Code and VAT Number 00470470014 - REA no. 394963
+                </p>
+            </div>
+        </footer>
+    </div>
+</div><style id="css-patch--subscribe-label-hide">
+.jcom-video-type-icon__text.jcom-video-type-icon__text--subscribeToWatch { display: none!Important; }
+.icon-diamond { margin-left: -5px!Important; }
+</style>  </div>
+
+    <script>
+        window.fbappid = "";
+        window.cultureCode = "en-GB";
+        window.baseUrl = "https://www.juventus.com/en";
+    </script>
+
+<script src="/en/assets/js/libraries/lib.js?_t=5f480b472f5209446e3e0d7306234378" type="text/javascript" defer></script><script src="/en/addon/whitelabel/js/jquery/jquery-3_3_1_min_js?_t=a09e13ee94d51c524b7e2a728c7d4039" type="text/javascript"></script><script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" type="text/javascript" async></script><script src="/en/assets/js/libraries/modules/common/anchorMenu.js?_t=c3b8810c36319bd6e650ab05fac9c4fa" type="text/javascript" async></script><script src="/en/assets/js/libraries/modules/common/search.js?_t=833c205309d29d0e55a3eb0489466dca" type="text/javascript" async></script><script src="/en/assets/js/libraries/modules/editorial/mosaic.js?_t=385483d8b88b5fff704cc35734705d61" type="text/javascript" async></script>
+    <svg id="OCIcons" style="display:none" xmlns="http://www.w3.org/2000/svg"><symbol id='play'><desc>
+      Play icon
+    </desc><path d="M79.372 148.594l8.78 6.085V73.51l-8.78 6.087zM96.154 67.964L88.166 73.5l70.651 40.594v-10.126zM96.154 160.226l62.663-36.005v-10.126l-70.65 40.594z" /></symbol><symbol id='down'><desc>
+      Down arrow icon
+    </desc><polygon id="downArrow" points="12,9.8 20.8,1 21.9,0 24,2.1 23,3.1 13.1,12.9 12,14 12,14 12,14 10.9,13 1.1,3.1 0,2.1 2.1,0 3.2,1" /></symbol><symbol id='youtube_circle'><desc>
+      Youtube logo w circle
+    </desc><path d="M25 0C11.193 0 0 11.193 0 25s11.193 25 25 25 25-11.193 25-25S38.807 0 25 0m0 1.19c13.129 0 23.81 10.681 23.81 23.81S38.129 48.81 25 48.81 1.19 38.129 1.19 25 11.871 1.19 25 1.19" /><path d="M22.104 29.05v-9.212l7.587 4.606-7.587 4.607zm14.142-11.423c-.659-1.185-1.373-1.403-2.828-1.486-1.454-.1-5.11-.141-8.276-.141-3.173 0-6.83.041-8.282.14-1.452.084-2.168.3-2.833 1.487C13.35 18.811 13 20.85 13 24.44v.012c0 3.574.349 5.629 1.027 6.8.665 1.185 1.38 1.4 2.832 1.5 1.453.086 5.11.137 8.283.137 3.167 0 6.822-.05 8.277-.135 1.455-.1 2.17-.315 2.828-1.5.685-1.172 1.03-3.226 1.03-6.8V24.44c0-3.59-.345-5.63-1.031-6.814z" /></symbol><symbol id='twitter_circle'><desc>
+      Twitter logo w circle
+    </desc><path d="M 25 0 C 11.193 0 0 11.193 0 25 C 0 38.807 11.193 50 25 50 C 38.807 50 50 38.807 50 25 C 50 11.193 38.807 0 25 0 M 25 1.19 C 38.129 1.19 48.81 11.871 48.81 25 C 48.81 38.129 38.129 48.81 25 48.81 C 11.871 48.81 1.19 38.129 1.19 25 C 1.19 11.871 11.871 1.19 25 1.19" /><path d="M 27 23.392 L 34.819 14.491 L 32.967 14.491 L 26.175 22.218 L 20.754 14.491 L 14.5 14.491 L 22.699 26.176 L 14.5 35.509 L 16.352 35.509 L 23.52 27.347 L 29.246 35.509 L 35.5 35.509 M 17.021 15.859 L 19.866 15.859 L 32.965 34.208 L 30.119 34.208" /></symbol><symbol id='threads_circle'><desc>
+      Threads logo w circle
+    </desc><path d="M 25 0 C 11.193 0 0 11.193 0 25 C 0 38.807 11.193 50 25 50 C 38.807 50 50 38.807 50 25 C 50 11.193 38.807 0 25 0 M 25 1.19 C 38.129 1.19 48.81 11.871 48.81 25 C 48.81 38.129 38.129 48.81 25 48.81 C 11.871 48.81 1.19 38.129 1.19 25 C 1.19 11.871 11.871 1.19 25 1.19" /><path d="M 35.445 20.194 C 34.614 17.42 33.07 15.216 30.413 13.932 C 28.29 12.907 26.023 12.694 23.698 12.981 C 19.697 13.475 16.882 15.567 15.517 19.407 C 14.234 23.018 14.241 26.684 15.333 30.317 C 16.051 32.708 17.432 34.629 19.643 35.871 C 21.382 36.844 23.284 37.164 26.097 37.133 C 28.098 37.119 30.624 36.336 32.65 34.196 C 35.366 31.328 35.325 26.11 30.87 24.069 C 30.611 23.951 30.529 23.805 30.508 23.536 C 30.449 22.719 30.264 21.929 29.906 21.191 C 29.004 19.335 27.433 18.561 25.443 18.532 C 23.632 18.504 22.097 19.123 20.961 20.615 C 20.82 20.803 20.831 20.897 21.024 21.018 C 21.438 21.283 21.85 21.55 22.244 21.844 C 22.466 22.009 22.578 21.972 22.756 21.765 C 23.671 20.694 24.87 20.527 26.156 20.753 C 27.379 20.968 28.004 21.794 28.3 22.946 C 28.383 23.271 28.287 23.312 28.007 23.271 C 27.039 23.131 26.066 23.144 25.094 23.231 C 24.11 23.32 23.181 23.6 22.337 24.139 C 20.472 25.33 19.942 27.796 21.201 29.582 C 22.051 30.785 23.302 31.301 24.736 31.377 C 26.704 31.483 28.374 30.878 29.494 29.131 C 29.986 28.362 30.251 27.506 30.391 26.612 C 30.431 26.35 30.482 26.262 30.745 26.446 C 32.037 27.347 32.649 28.888 32.308 30.442 C 31.899 32.303 30.666 33.479 29.022 34.257 C 27.425 35.012 25.715 35.111 23.998 34.952 C 20.686 34.646 18.407 32.974 17.38 29.774 C 16.417 26.777 16.418 23.73 17.292 20.695 C 18.047 18.074 19.662 16.211 22.348 15.434 C 24.314 14.854 26.4 14.855 28.352 15.437 C 30.193 15.977 31.604 17.081 32.55 18.76 C 32.903 19.385 33.183 20.047 33.388 20.735 C 33.434 20.896 33.467 21.003 33.676 20.939 C 34.202 20.78 34.731 20.636 35.261 20.496 C 35.435 20.451 35.505 20.393 35.445 20.194 Z M 28.403 25.746 C 28.3 26.49 28.167 27.224 27.785 27.89 C 27.427 28.514 26.912 28.936 26.215 29.112 C 25.363 29.33 24.518 29.328 23.713 28.957 C 23.098 28.673 22.677 28.22 22.64 27.498 C 22.603 26.769 22.956 26.246 23.557 25.873 C 24.215 25.464 24.958 25.371 25.707 25.323 C 25.892 25.312 26.08 25.319 26.267 25.317 C 26.897 25.293 27.517 25.371 28.137 25.454 C 28.316 25.475 28.435 25.52 28.403 25.746 Z" /></symbol><symbol id='instagram_circle'><desc>
+      Instagram logo w circle
+    </desc><path d="M25 0C11.193 0 0 11.193 0 25s11.193 25 25 25 25-11.193 25-25S38.807 0 25 0m0 1.19c13.129 0 23.81 10.681 23.81 23.81S38.129 48.81 25 48.81 1.19 38.129 1.19 25 11.871 1.19 25 1.19" /><path d="M25.5 21.077a4.41 4.41 0 014.423 4.423 4.41 4.41 0 01-4.423 4.423 4.41 4.41 0 01-4.423-4.423 4.41 4.41 0 014.423-4.423zm0-1.77c-3.41 0-6.192 2.783-6.192 6.193 0 3.41 2.782 6.192 6.192 6.192s6.192-2.782 6.192-6.192-2.782-6.192-6.192-6.192zm6.635-1.768a1.327 1.327 0 100 2.654 1.327 1.327 0 000-2.654zm-11.459-1.77h9.648a4.893 4.893 0 014.907 4.907v9.648a4.893 4.893 0 01-4.907 4.907h-9.648a4.893 4.893 0 01-4.907-4.907v-9.648a4.893 4.893 0 014.907-4.907zm0-1.769C17 14 14 17 14 20.676v9.648C14 34 17 37 20.676 37h9.648C34 37 37 34 37 30.324v-9.648C37 17 34 14 30.324 14h-9.648z" /></symbol><symbol id='facebook_circle'><desc>
+      Facebook logo w circle
+    </desc><path d="M25 0C11.193 0 0 11.193 0 25s11.193 25 25 25 25-11.193 25-25S38.807 0 25 0m0 1.19c13.129 0 23.81 10.681 23.81 23.81S38.129 48.81 25 48.81 1.19 38.129 1.19 25 11.871 1.19 25 1.19" /><path d="M26.79 37V26.053h3.536l.53-4.267H26.79v-2.724c0-1.235.329-2.077 2.036-2.077L31 16.984v-3.817c-.376-.05-1.667-.167-3.169-.167-3.136 0-5.284 1.988-5.284 5.64v3.146H19v4.267h3.547V37h4.243z" /></symbol><symbol id='linkedin_circle'><desc>
+      Linkedin logo w circle
+    </desc><path d="M25 0C11.193 0 0 11.193 0 25s11.193 25 25 25 25-11.193 25-25S38.807 0 25 0m0 1.19c13.129 0 23.81 10.681 23.81 23.81S38.129 48.81 25 48.81 1.19 38.129 1.19 25 11.871 1.19 25 1.19" /><path d="M20.212 19.995h-3.93a.316.316 0 00-.316.316V32.94c0 .174.141.315.316.315h3.93a.316.316 0 00.316-.315V20.31a.316.316 0 00-.316-.316M18.248 13.718a2.595 2.595 0 00-2.593 2.59 2.596 2.596 0 002.593 2.593 2.595 2.595 0 002.592-2.592 2.594 2.594 0 00-2.592-2.591M30.21 19.682c-1.578 0-2.745.678-3.453 1.45v-.82a.316.316 0 00-.316-.317h-3.764a.316.316 0 00-.316.316V32.94c0 .174.141.316.316.316h3.922a.316.316 0 00.316-.316V26.69c0-2.105.571-2.926 2.039-2.926 1.598 0 1.725 1.315 1.725 3.034v6.14c0 .174.142.316.316.316h3.924a.316.316 0 00.315-.316v-6.927c0-3.13-.596-6.33-5.024-6.33" /></symbol><symbol id='douyin_circle'><desc>
+      Douyin logo w circle
+    </desc><path d="M25 0C11.193 0 0 11.193 0 25s11.193 25 25 25 25-11.193 25-25S38.807 0 25 0m0 1.19c13.129 0 23.81 10.681 23.81 23.81S38.129 48.81 25 48.81 1.19 38.129 1.19 25 11.871 1.19 25 1.19" /><path d="M37.9788 18.957c0-.1293-.1062-.237-.2337-.237-1.1469-.043-2.2725-.3877-3.2495-1.0123l.0637.0861-.0637-.0861c-1.593-1.0123-2.6761-2.6492-3.016-4.523-.0424-.1724-.0637-.3662-.0637-.5385v-.3877c0-.1293-.1062-.2585-.2548-.2585h-4.2478c-.1275 0-.2549.1077-.2549.2585v18.8892c0 2.24-1.784 4.0277-3.993 4.0277-.6158 0-1.2318-.1508-1.784-.4308-1.338-.6892-2.1876-2.0892-2.1876-3.6184 0-1.077.4248-2.1108 1.1681-2.8647.7434-.7538 1.7629-1.1846 2.8248-1.1846.2974 0 .616.0431.9133.1077.0637.0216.1487 0 .2124-.043.0637-.0431.085-.1078.085-.194V22.597c0-.1292-.085-.2369-.2124-.2584a7.4426 7.4426 0 00-.977-.0647c-4.8213 0-8.708 3.9847-8.708 8.8524 0 2.9507 1.4442 5.7076 3.8655 7.3661C19.2885 39.4831 20.9876 40 22.7292 40c4.8212 0 8.708-3.963 8.708-8.8523V21.843c0-.0862.0424-.1723.1274-.2154.085-.043.17-.043.2549 0 1.7628 1.1846 3.823 1.8308 5.9469 1.8738.0637 0 .1274-.0215.1699-.0646.0425-.043.0637-.1077.0637-.1723l-.0212-4.3077z" /></symbol><symbol id='twitch_circle'><desc>
+      Twitch logo w circle
+    </desc><path d="M25 0C11.193 0 0 11.193 0 25s11.193 25 25 25 25-11.193 25-25S38.807 0 25 0m0 1.19c13.129 0 23.81 10.681 23.81 23.81S38.129 48.81 25 48.81 1.19 38.129 1.19 25 11.871 1.19 25 1.19" /><path d="M37.353 11.765V27.34l-6.659 6.673h-4.993l-3.327 3.339h-3.332v-3.34h-6.1V16.216l1.664-4.45h22.747zm-2.219 2.223h-18.31v16.133h4.996v3.335l3.327-3.335h6.102l3.885-3.895V13.988z" /><path d="M25.147 18.441v6.674h-2.22v-6.674h2.22zm6.102 0v6.674H29.03v-6.674h2.22z" /></symbol><symbol id='tickets'><desc>
+      Tickets in header
+    </desc><path d="M197.592 79v.021l.204-.012L198 79v7.45c-5.318 0-9.645 4.35-9.645 9.7 0 5.256 4.18 9.55 9.37 9.697l.275.004v7.45c-5.318 0-9.645 4.35-9.645 9.7 0 5.255 4.18 9.549 9.37 9.695l.275.004v7.45c-5.318 0-9.645 4.352-9.645 9.7 0 5.257 4.18 9.55 9.37 9.697l.275.004V167l-.204-.009-.204-.011v.02H55.846v-7.45c.546 0 1.08-.045 1.602-.133l12.536-.001-.089.135h31.745v-.135h7.408v.135h74.904a17.108 17.108 0 01-3.005-9.7c0-5.437 2.537-10.281 6.473-13.426-3.936-3.145-6.473-7.988-6.473-13.425s2.537-10.28 6.473-13.425c-3.936-3.144-6.473-7.988-6.473-13.425a17.1 17.1 0 012.773-9.352l.232-.348h-3.722V79h17.362zm-25.846-18v.021l.204-.012.204-.009v7.45c-5.318 0-9.645 4.35-9.645 9.7 0 5.256 4.179 9.55 9.37 9.697l.275.004v7.45c-5.318 0-9.645 4.35-9.645 9.7 0 5.255 4.179 9.549 9.37 9.695l.275.004v7.45c-5.318 0-9.645 4.352-9.645 9.7 0 5.257 4.179 9.55 9.37 9.697l.275.004V149l-.204-.009-.204-.011v.02H30v-7.45c5.318 0 9.645-4.35 9.645-9.7 0-5.256-4.18-9.55-9.37-9.696L30 122.15v-7.45c5.318 0 9.645-4.351 9.645-9.7 0-5.256-4.18-9.55-9.37-9.696L30 95.3v-7.45c5.318 0 9.645-4.351 9.645-9.7 0-5.257-4.18-9.55-9.37-9.696L30 68.45V61h141.746zm-95.952 7.45H44.05a17.111 17.111 0 013.004 9.7c0 5.437-2.536 10.281-6.473 13.425 3.937 3.145 6.473 7.988 6.473 13.425s-2.536 10.28-6.473 13.425c3.937 3.145 6.473 7.989 6.473 13.425 0 3.45-1.022 6.66-2.772 9.353l-.232.348h31.745v-12.009h7.408v12.009h74.904a17.108 17.108 0 01-3.005-9.7c0-5.437 2.537-10.281 6.473-13.426-3.936-3.145-6.473-7.988-6.473-13.425s2.537-10.28 6.473-13.425c-3.936-3.144-6.473-7.988-6.473-13.425a17.1 17.1 0 012.772-9.352l.233-.348H83.202v12.008h-7.408V68.45zm56.062 14.443v30.924c0 7.318-5.92 13.27-13.196 13.27-7.173 0-13.03-5.786-13.193-12.962l-.003-.308h7.408c0 3.209 2.597 5.82 5.788 5.82 3.117 0 5.666-2.49 5.783-5.597l.005-.223V90.342h-16.123v-7.449h23.531zm-48.654 25.833v13.308h-7.408v-13.308h7.408zm0-20.818v13.367h-7.408V87.908h7.408z" /></symbol><symbol id='more_vertical'><desc>
+      Vertical More in header
+    </desc><path d="M114.235 156.441c8.31 0 15.236 7.294 15.236 15.85 0 8.556-6.926 15.709-15.236 15.709S99 180.706 99 172.15c0-8.555 6.925-15.709 15.235-15.709zm0-57.676c8.31 0 15.236 7.044 15.236 15.78 0 8.734-6.926 15.779-15.236 15.779S99 123.138 99 114.544s6.925-15.78 15.235-15.78zm0-58.765c8.31 0 15.236 7.294 15.236 15.85 0 8.555-6.926 15.709-15.236 15.709S99 64.265 99 55.709C99 47.153 105.925 40 114.235 40z" /></symbol><symbol id='help'><desc>
+      Help
+    </desc><path d="M114.5 40a74.5 74.5 0 0174.5 74.5c0 41.145-33.355 74.5-74.5 74.5S40 155.645 40 114.5 73.355 40 114.5 40zm24.66 15.318c-23.907-9.963-51.474-4.558-69.828 13.692-18.354 18.25-23.874 45.744-13.982 69.643 9.891 23.9 33.243 39.489 59.15 39.49v.241c35.346 0 64-28.599 64-63.878.097-25.858-15.433-49.224-39.34-59.188zM122 136v14h-15v-14h15zm-7.722-56.98a30.048 30.048 0 0117.747 4.998c4.803 3.568 7.413 9.314 6.915 15.221a16.862 16.862 0 01-2.997 10.224 35.296 35.296 0 01-6.914 6.36l-3.457 2.5a9.985 9.985 0 00-3.457 5.225 20.394 20.394 0 00-.692 5.452h-12.907c-.02-3.694.524-7.37 1.614-10.905a19.411 19.411 0 016.453-7.042l3.457-2.726a12.13 12.13 0 002.766-2.727 9.449 9.449 0 001.844-5.679c.05-2.36-.678-4.671-2.074-6.588-1.383-1.97-3.919-2.954-7.606-2.954-3.089-.283-6.09 1.11-7.837 3.635a13.717 13.717 0 00-2.304 7.497H91c.307-8.784 3.457-15.07 9.45-18.856a25.168 25.168 0 0113.828-3.635z" /></symbol><symbol id='shop'><desc>
+      Shop
+    </desc><path d="M114 46c-17.069 0-31.034 14.052-31.034 31.189V90.04H49.172c-2.93 0-5.172 2.228-5.172 5.14v61.114C44 170.52 55.552 182 69.862 182h88.276c14.31 0 25.862-11.481 25.862-25.705V95.182c0-2.913-2.241-5.141-5.172-5.141h-33.794V77.189C145.034 60.052 131.07 46 114 46zM93 76.056C93 64.492 102.675 55 114.5 55S136 64.492 136 76.056V89H93V76.056zM175 100v57.298c0 8.723-7.01 15.702-15.772 15.702H69.772C61.01 173 54 166.021 54 157.298V100h121z" fill-rule="nonzero" /></symbol><symbol id='close'><desc>
+      Close
+    </desc><path d="M181.26 56.103l-58.396 58.396 58.397 58.398-8.364 8.364-58.397-58.397-58.397 58.397-8.364-8.364 58.397-58.398-58.397-58.396 8.364-8.364 58.397 58.396 58.397-58.396 8.364 8.364z" /></symbol><symbol id='double-arrow'><desc>
+      Double arrow
+    </desc><path d="M114.506 0L228 114 114.506 228l-25.362-25.475L177.276 114 89.144 25.475 114.506 0zM25.362 0l113.494 114L25.362 228 0 202.525 88.132 114 0 25.475 25.362 0z" /></symbol><symbol id='search'><desc>
+      Search
+    </desc><path d="M152.878 137.04l48.204 27.364c3.465 1.967 4.832 6.212 3.288 9.792l-.438.863a7.966 7.966 0 01-6.003 3.892l-.81.049a7.936 7.936 0 01-3.997-1.04l-48.204-27.364c-3.465-1.967-4.832-6.212-3.288-9.792l.438-.863a7.966 7.966 0 016.003-3.892l.81-.049a7.936 7.936 0 013.997 1.04zM80 48c32.033 0 58 25.967 58 58 0 31.46-25.048 57.07-56.29 57.975L80 164c-32.033 0-58-25.967-58-58 0-31.46 25.048-57.07 56.29-57.975L80 48zm0 13c-24.922 0-45 20.22-45 45s20.078 45 45 45 45-20.22 45-45-20.078-45-45-45z" /></symbol><symbol id='login'><desc>
+      Login
+    </desc><path d="M128.032 129c8.74 0 17.24 2.428 24.581 7.024C165.38 144.013 173 157.433 173 171.918V189h-10.54v-17.082c0-22-15.155-32.042-34.431-32.042H99.965c-19.663 0-34.432 12.1-34.432 32.042V189H55v-17.082c0-9.614 3.303-18.73 9.555-26.363C73.172 135.035 86.08 129 99.968 129zM115 40c22.608 0 41 18.168 41 40.5S137.605 121 115 121c-22.608 0-41-18.17-41-40.5C74 58.168 92.392 40 115 40zm0 10.499C98.457 50.499 85 63.957 85 80.5c0 16.54 13.458 29.999 30.001 29.999 16.54 0 29.999-13.46 29.999-29.999 0-16.543-13.46-30.001-29.999-30.001z" /></symbol><symbol id='adidas'><desc>
+      Adidas sponsor
+    </desc><path d="M 123.178 54.855 C 111.25 61.755 101.377 67.517 101.23 67.664 C 101.047 67.848 116.168 94.42 134.813 126.754 L 168.689 185.478 L 198.344 185.515 L 228 185.515 L 227.082 183.936 C 226.568 183.092 207.997 150.941 185.829 112.477 C 163.624 74.05 145.31 42.523 145.126 42.486 C 144.979 42.413 135.07 47.992 123.178 54.855 Z M 72.456 103.595 C 60.307 110.606 50.361 116.441 50.324 116.551 C 50.324 116.661 59.243 132.186 70.107 151.051 L 89.926 185.331 L 119.471 185.441 C 135.73 185.478 149.053 185.441 149.053 185.368 C 149.053 185.221 94.808 91.117 94.587 90.933 C 94.551 90.896 84.604 96.585 72.456 103.595 Z M 22.101 152.336 C 10.099 159.273 0.153 165.072 0.006 165.218 C -0.141 165.365 2.355 169.953 5.511 175.422 L 11.237 185.331 L 40.892 185.441 C 57.224 185.478 70.474 185.405 70.401 185.258 C 70.29 185.074 64.418 174.871 57.298 162.576 C 50.214 150.244 44.269 140.077 44.159 139.967 C 44.012 139.82 34.102 145.399 22.101 152.336 Z" /></symbol><symbol id='jeep'><desc>
+      Jeep sponsor
+    </desc><path d="M187.105 117.9c-.175 9.8 1.925 14.98 10.01 14.98 8.085 0 9.24-8.855 9.24-15.575 0-6.72-1.54-13.265-10.01-13.265-5.18 0-9.03 4.06-9.24 13.86zm-16.31 40.95V92.525h16.52v2.695c0 3.57 1.435 2.1 2.625.7.175-.245 3.885-4.76 12.18-4.76 8.26 0 21.14 5.775 21.14 26.145 0 15.785-7.7 27.3-20.965 27.3-7.315 0-11.55-2.905-12.495-4.06-.98-1.155-2.31-1.365-2.31 0v18.27h-16.695v.035zM42.87 71h17.885v46.9c0 8.085-3.465 24.99-28.28 24.99S5 127.14 5 118.285v-8.645h17.29v8.47c0 5.215 3.465 10.01 10.01 10.01s10.57-3.675 10.57-9.8V71zM98.17 110.795c0-4.795-2.695-9.415-8.855-9.415-5.95 0-8.085 4.235-8.085 9.415h16.94zM87.6 90.6c14.035 0 26.355 5.39 26.355 30.205h-33.25c0 7.875 3.255 11.165 9.03 11.165 5.775 0 7.7-4.62 7.7-4.62h16.345c0 7.105-9.8 16.73-24.605 16.52-16.905 0-25.2-12.495-25.2-25.375 0-12.915 7.28-27.895 23.625-27.895zM151.37 110.795c0-4.795-2.695-9.415-8.855-9.415-5.95 0-8.085 4.235-8.085 9.415h16.94zM140.8 90.6c14.035 0 26.355 5.39 26.355 30.205h-33.25c0 7.875 3.255 11.165 9.03 11.165 5.775 0 7.7-4.62 7.7-4.62h16.345c0 7.105-9.8 16.73-24.605 16.52-16.94 0-25.2-12.495-25.2-25.375-.035-12.915 7.28-27.895 23.625-27.895z" /><path d="M217.73 144.85a4.305 4.305 0 110 8.61 4.305 4.305 0 010-8.61z" stroke-width=".566" /><path d="M219.55 151.5l-.945-2.24c.315-.105.42-.175.56-.35.21-.21.315-.56.315-.875 0-.805-.595-1.365-1.505-1.365h-1.89v4.795h.56V149.4h1.365l.91 2.065h.63v.035zm-2.87-2.59v-1.715h1.33c.56 0 .91.315.91.805 0 .56-.385.91-.98.91h-1.26z" /></symbol><symbol id='fans-2'><desc>
+      Fans 2
+    </desc><path d="M65.5424,82.7536 C71.5184,82.7536 76.3614,87.5976 76.3614,93.5736 L76.3614,93.5736 L76.3614,139.7746 L67.6464,139.7746 L67.6468,198.236 L58.9318,198.236 L58.9318,148.489 L48.4478,148.489 L48.4478,198.236 L39.7328,198.236 L39.7324,139.7746 L31.0184,139.7746 L31.0184,93.5676 C31.0184,87.5946 35.8584,82.7536 41.8314,82.7536 L41.8314,82.7536 Z M184.9828,144.774 L184.9828,198.236 L176.2678,198.236 L176.2678,153.489 L165.7838,153.489 L165.7838,198.236 L157.0678,198.236 L157.0678,144.774 L184.9828,144.774 Z M128.6464,121.321 C134.6224,121.321 139.4654,126.165 139.4654,132.141 L139.4654,132.141 L139.4654,159.342 L130.7513,159.342 L130.7513,198.236 L122.0363,198.236 L122.0363,168.057 L114.5523,168.057 L114.5523,198.236 L105.8373,198.236 L105.8373,159.342 L130.7504,159.342 L130.7504,130.036 L105.8364,130.036 L105.8364,159.342 L97.1224,159.342 L97.1224,132.135 C97.1224,126.162 101.9624,121.321 107.9354,121.321 L107.9354,121.321 Z M178.9714,84.7535 C184.4294,84.7535 189.0324,88.8185 189.7074,94.2355 L189.7074,94.2355 L197.1704,144.7745 L188.3874,144.7745 L180.8304,93.4685 L162.7104,93.4685 L153.6884,144.7745 L144.8814,144.7745 L153.8224,94.0105 C154.5994,88.6945 159.1574,84.7535 164.5294,84.7535 L164.5294,84.7535 Z M67.6464,91.4686 L39.7324,91.4686 L39.7328,139.774 L67.6468,139.774 L67.6464,91.4686 Z M96.1564,29.6884 C102.4354,30.3144 106.0874,32.1084 112.0724,35.7434 C119.8834,40.4874 127.4484,39.8054 135.9884,35.8864 C138.1634,34.8884 146.9074,34.3164 146.6484,43.4944 L145.9724,67.5554 C145.8934,70.3674 144.8814,75.4304 140.1554,78.0114 C131.5454,82.7134 119.3954,85.8924 106.5364,78.0804 C101.2304,74.8584 98.1784,73.5154 92.6824,73.1414 L90.8274,124.0894 L82.0524,123.7694 L85.0734,40.5974 C85.0734,33.4174 90.3684,29.1124 96.1564,29.6884 Z M118.2944,87.1701 C126.3314,87.1701 132.8694,93.7091 132.8694,101.7461 C132.8694,109.7821 126.3314,116.3211 118.2944,116.3211 C110.2584,116.3211 103.7194,109.7821 103.7194,101.7461 C103.7194,93.7091 110.2584,87.1701 118.2944,87.1701 Z M118.2944,95.5861 C114.8984,95.5861 112.1344,98.3491 112.1344,101.7461 C112.1344,105.1421 114.8984,107.9061 118.2944,107.9061 C121.6904,107.9061 124.4544,105.1421 124.4544,101.7461 C124.4544,98.3491 121.6904,95.5861 118.2944,95.5861 Z M171.0253,51.1901 C179.0613,51.1901 185.6003,57.7291 185.6003,65.7661 C185.6003,73.8021 179.0613,80.3411 171.0253,80.3411 C162.9883,80.3411 156.4503,73.8021 156.4503,65.7661 C156.4503,57.7291 162.9883,51.1901 171.0253,51.1901 Z M53.6899,49.1901 C61.7269,49.1901 68.2649,55.7291 68.2649,63.7661 C68.2649,71.8021 61.7269,78.3411 53.6899,78.3411 C45.6539,78.3411 39.1149,71.8021 39.1149,63.7661 C39.1149,55.7291 45.6539,49.1901 53.6899,49.1901 Z M93.9494,38.3284 L93.0014,64.3644 C100.3174,64.8194 104.5694,66.6144 111.0934,70.5764 C118.9184,75.3284 126.8024,75.0934 137.1284,69.6904 L137.8314,44.7134 C129.4684,48.2624 118.8254,50.1164 107.5154,43.2484 C102.3024,40.0814 99.2654,38.7304 93.9494,38.3284 Z M171.0253,59.6061 C167.6293,59.6061 164.8653,62.3691 164.8653,65.7661 C164.8653,69.1621 167.6293,71.9261 171.0253,71.9261 C174.4213,71.9261 177.1853,69.1621 177.1853,65.7661 C177.1853,62.3691 174.4213,59.6061 171.0253,59.6061 Z M53.6899,57.6061 C50.2939,57.6061 47.5299,60.3691 47.5299,63.7661 C47.5299,67.1621 50.2939,69.9261 53.6899,69.9261 C57.0859,69.9261 59.8499,67.1621 59.8499,63.7661 C59.8499,60.3691 57.0859,57.6061 53.6899,57.6061 Z" /></symbol></svg>
+</body>
+</html>

@@ -37,6 +37,25 @@ import { usaPlayers } from './usa';
 import { mexicoPlayers } from './mexico';
 import { moroccoPlayers } from './morocco';
 import { belgiumPlayers } from './belgium';
+import { tunisiaPlayers } from './tunisia';
+import { uruguayPlayers } from './uruguay';
+import { colombiaPlayers } from './colombia';
+import { switzerlandPlayers } from './switzerland';
+import { turkeyPlayers } from './turkey';
+import { senegalPlayers } from './senegal';
+import { egyptPlayers } from './egypt';
+import { iranPlayers } from './iran';
+import { scotlandPlayers } from './scotland';
+import { serbiaPlayers } from './serbia';
+import { denmarkPlayers } from './denmark';
+import { polandPlayers } from './poland';
+import { canadaPlayers } from './canada';
+import { ghanaPlayers } from './ghana';
+import { ecuadorPlayers } from './ecuador';
+import { cameroonPlayers } from './cameroon';
+import { saudiArabiaPlayers } from './saudi-arabia';
+import { nigeriaPlayers } from './nigeria';
+import { algeriaPlayers } from './algeria';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -389,5 +408,176 @@ export const teams: Team[] = [
     logo: `${BASE}logos/belgium.png`,
     league: 'World Cup 2026',
     players: belgiumPlayers,
+  },
+  {
+    id: 'tunisia',
+    name: 'Tunisia',
+    shortName: 'TUN',
+    color: '#E70013',
+    logo: `${BASE}logos/tunisia.png`,
+    league: 'World Cup 2026',
+    players: tunisiaPlayers,
+  },
+  {
+    id: 'uruguay',
+    name: 'Uruguay',
+    shortName: 'URU',
+    color: '#5FC2E8',
+    logo: `${BASE}logos/uruguay.png`,
+    league: 'World Cup 2026',
+    players: uruguayPlayers,
+  },
+  {
+    id: 'colombia',
+    name: 'Colombia',
+    shortName: 'COL',
+    color: '#FCD116',
+    logo: `${BASE}logos/colombia.png`,
+    league: 'World Cup 2026',
+    players: colombiaPlayers,
+  },
+  {
+    id: 'switzerland',
+    name: 'Switzerland',
+    shortName: 'SUI',
+    color: '#FF0000',
+    logo: `${BASE}logos/switzerland.png`,
+    league: 'World Cup 2026',
+    players: switzerlandPlayers,
+  },
+  {
+    id: 'turkey',
+    name: 'Turkey',
+    shortName: 'TUR',
+    color: '#E30A17',
+    logo: `${BASE}logos/turkey.png`,
+    league: 'World Cup 2026',
+    players: turkeyPlayers,
+  },
+  {
+    id: 'senegal',
+    name: 'Senegal',
+    shortName: 'SEN',
+    color: '#00853F',
+    logo: `${BASE}logos/senegal.png`,
+    league: 'World Cup 2026',
+    players: senegalPlayers,
+  },
+  {
+    id: 'egypt',
+    name: 'Egypt',
+    shortName: 'EGY',
+    color: '#CE1126',
+    logo: `${BASE}logos/egypt.png`,
+    league: 'World Cup 2026',
+    players: egyptPlayers,
+  },
+  {
+    id: 'iran',
+    name: 'Iran',
+    shortName: 'IRN',
+    color: '#239F40',
+    logo: `${BASE}logos/iran.png`,
+    league: 'World Cup 2026',
+    players: iranPlayers,
+  },
+  {
+    id: 'scotland',
+    name: 'Scotland',
+    shortName: 'SCO',
+    color: '#003078',
+    logo: `${BASE}logos/scotland.png`,
+    league: 'World Cup 2026',
+    players: scotlandPlayers,
+  },
+  {
+    id: 'serbia',
+    name: 'Serbia',
+    shortName: 'SRB',
+    color: '#C6363C',
+    logo: `${BASE}logos/serbia.png`,
+    league: 'World Cup 2026',
+    players: serbiaPlayers,
+  },
+  {
+    id: 'denmark',
+    name: 'Denmark',
+    shortName: 'DEN',
+    color: '#C8102E',
+    logo: `${BASE}logos/denmark.png`,
+    league: 'World Cup 2026',
+    players: denmarkPlayers,
+  },
+  {
+    id: 'poland',
+    name: 'Poland',
+    shortName: 'POL',
+    color: '#DC143C',
+    logo: `${BASE}logos/poland.png`,
+    league: 'World Cup 2026',
+    players: polandPlayers,
+  },
+  {
+    id: 'canada',
+    name: 'Canada',
+    shortName: 'CAN',
+    color: '#FF0000',
+    logo: `${BASE}logos/canada.png`,
+    league: 'World Cup 2026',
+    players: canadaPlayers,
+  },
+  {
+    id: 'ghana',
+    name: 'Ghana',
+    shortName: 'GHA',
+    color: '#CE1126',
+    logo: `${BASE}logos/ghana.png`,
+    league: 'World Cup 2026',
+    players: ghanaPlayers,
+  },
+  {
+    id: 'ecuador',
+    name: 'Ecuador',
+    shortName: 'ECU',
+    color: '#FFD100',
+    logo: `${BASE}logos/ecuador.png`,
+    league: 'World Cup 2026',
+    players: ecuadorPlayers,
+  },
+  {
+    id: 'cameroon',
+    name: 'Cameroon',
+    shortName: 'CMR',
+    color: '#007A5E',
+    logo: `${BASE}logos/cameroon.png`,
+    league: 'World Cup 2026',
+    players: cameroonPlayers,
+  },
+  {
+    id: 'saudi-arabia',
+    name: 'Saudi Arabia',
+    shortName: 'KSA',
+    color: '#006C35',
+    logo: `${BASE}logos/saudi-arabia.png`,
+    league: 'World Cup 2026',
+    players: saudiArabiaPlayers,
+  },
+  {
+    id: 'nigeria',
+    name: 'Nigeria',
+    shortName: 'NGA',
+    color: '#008751',
+    logo: `${BASE}logos/nigeria.png`,
+    league: 'World Cup 2026',
+    players: nigeriaPlayers,
+  },
+  {
+    id: 'algeria',
+    name: 'Algeria',
+    shortName: 'ALG',
+    color: '#006233',
+    logo: `${BASE}logos/algeria.png`,
+    league: 'World Cup 2026',
+    players: algeriaPlayers,
   },
 ];

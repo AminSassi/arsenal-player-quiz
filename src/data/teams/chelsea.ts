@@ -5,7 +5,6 @@ const BASE = import.meta.env.BASE_URL;
 export const chelseaPlayers: Player[] = [
   { name: 'Robert Sanchez', image: `${BASE}players/chelsea/sanchez.png` },
   { name: 'Filip Jorgensen', image: `${BASE}players/chelsea/jorgensen.png` },
-  { name: 'Gaga Slonina', image: `${BASE}players/chelsea/slonina.png` },
   { name: 'Tosin Adarabioyo', image: `${BASE}players/chelsea/adarabioyo.png` },
   { name: 'Benoit Badiashile', image: `${BASE}players/chelsea/badiashile.png` },
   { name: 'Levi Colwill', image: `${BASE}players/chelsea/colwill.png` },
